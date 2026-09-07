@@ -19,6 +19,19 @@ const fontData = {
   800: readFileSync(path.join(process.cwd(), "src/fonts/Sora-800.ttf")),
 };
 
+// Símbolo oficial de la marca (versión negativa, teal sobre fondo oscuro).
+const symbolSvg = readFileSync(
+  path.join(process.cwd(), "public/LogotiposTechToJob/SVG/SímboloNegativo.svg"),
+  "utf8"
+);
+const symbolD = symbolSvg.match(/<path[^>]*\sd="([^"]+)"/)?.[1];
+const symbolFill =
+  symbolSvg.match(/fill:\s*(#[0-9a-fA-F]{3,6})/)?.[1] ?? "#84c0bf";
+
+if (!symbolD) {
+  throw new Error("No se pudo extraer el path del símbolo de TechToJob");
+}
+
 export default function OpenGraphImage() {
   return new ImageResponse(
     (
@@ -40,16 +53,19 @@ export default function OpenGraphImage() {
             style={{
               width: 96,
               height: 96,
-              borderRadius: 24,
-              background: "#84c0bf",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: 48,
-              fontWeight: 800,
             }}
           >
-            T
+            <svg
+              viewBox="0 0 287.52 287.53"
+              width={96}
+              height={96}
+              style={{ display: "flex" }}
+            >
+              <path d={symbolD} fill={symbolFill} />
+            </svg>
           </div>
           <div style={{ fontSize: 56, fontWeight: 700, letterSpacing: -2 }}>
             TechToJob
