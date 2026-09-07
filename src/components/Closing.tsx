@@ -1,4 +1,4 @@
-export default function Cierre() {
+export default function Closing() {
   return (
     <section
       className="bg-ink"

@@ -6,7 +6,7 @@ const premios = [
   { texto: "Conexiones con empresas", icono: Trophy },
 ];
 
-export default function Torneos() {
+export default function Tournaments() {
   return (
     <section
       id="torneos"

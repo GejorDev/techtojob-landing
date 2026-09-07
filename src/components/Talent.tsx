@@ -6,7 +6,7 @@ const skills = [
   { etiqueta: "Disponibilidad", detalle: "Full-time, part-time o proyectos", icono: CalendarClock },
 ];
 
-export default function Talento() {
+export default function Talent() {
   return (
     <section
       id="talento"

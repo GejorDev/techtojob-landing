@@ -21,7 +21,7 @@ const beneficios = [
   },
 ];
 
-export default function Empresas() {
+export default function Companies() {
   return (
     <section
       id="empresas"

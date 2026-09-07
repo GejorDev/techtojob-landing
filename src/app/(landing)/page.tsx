@@ -1,25 +1,25 @@
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
-import Talento from "@/components/Talento";
-import Empresas from "@/components/Empresas";
-import Torneos from "@/components/Torneos";
+import Talent from "@/components/Talent";
+import Companies from "@/components/Companies";
+import Tournaments from "@/components/Tournaments";
 import Networking from "@/components/Networking";
-import Noticias from "@/components/Noticias";
+import News from "@/components/News";
 import Newsletter from "@/components/Newsletter";
-import Cierre from "@/components/Cierre";
+import Closing from "@/components/Closing";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <HowItWorks />
-      <Talento />
-      <Empresas />
-      <Torneos />
+      <Talent />
+      <Companies />
+      <Tournaments />
       <Networking />
-      <Noticias />
+      <News />
       <Newsletter />
-      <Cierre />
+      <Closing />
     </>
   );
 }

@@ -25,7 +25,7 @@ const noticias = [
   },
 ];
 
-export default function Noticias() {
+export default function News() {
   return (
     <section
       id="noticias"
