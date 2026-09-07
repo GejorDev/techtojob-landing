@@ -86,7 +86,8 @@ src/app/
 ## Configuración
 
 Copia `.env.example` a `.env` y ajusta `NEXT_PUBLIC_SITE_URL` a la URL real del
-deploy. Sin variable, se usa `https://techtojob.com` como fallback.
+deploy. Sin variable, se usa `https://techtojob-landing.vercel.app` como fallback
+(hasta conectar el dominio propio en Vercel).
 
 ```bash
 npm install
