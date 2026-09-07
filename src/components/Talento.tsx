@@ -1,0 +1,87 @@
+import { Code2, Gauge, CalendarClock } from "lucide-react";
+
+const skills = [
+  { etiqueta: "Stack", detalle: "Frontend, backend, mobile, data, DevOps…", icono: Code2 },
+  { etiqueta: "Nivel", detalle: "Junior, mid, senior o en transición", icono: Gauge },
+  { etiqueta: "Disponibilidad", detalle: "Full-time, part-time o proyectos", icono: CalendarClock },
+];
+
+export default function Talento() {
+  return (
+    <section
+      id="talento"
+      className="scroll-mt-16"
+      aria-labelledby="talento-titulo"
+    >
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-24">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-widest text-ink-muted">
+            Para desarrolladores
+          </p>
+          <h2
+            id="talento-titulo"
+            className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
+          >
+            Ofrécete como talento y deja que te encuentren
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-ink-muted">
+            No mandas tu CV a un agujero negro: construyes un perfil público
+            que las empresas ven, y que tú controlas. Mientras participas en la
+            comunidad, tu perfil habla por ti.
+          </p>
+          <ul className="mt-7 divide-y divide-line">
+            {skills.map((item) => (
+              <li key={item.etiqueta} className="flex items-center gap-4 py-3">
+                <item.icono className="h-5 w-5 shrink-0 text-teal-dark" aria-hidden="true" />
+                <span className="w-36 shrink-0 font-semibold text-ink">
+                  {item.etiqueta}
+                </span>
+                <span className="text-ink-muted">{item.detalle}</span>
+              </li>
+            ))}
+          </ul>
+          <a
+            href="https://discord.gg/techtojob"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition-colors hover:bg-ink-soft"
+          >
+            Publicar mi perfil
+          </a>
+        </div>
+
+        <div
+          className="rounded-3xl bg-ink p-8 text-white sm:p-10"
+          aria-hidden="true"
+        >
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-teal text-lg font-bold text-ink">
+                M
+              </div>
+              <div>
+                <p className="font-semibold">Marta · Frontend</p>
+                <p className="text-sm text-zinc-400">React · TypeScript</p>
+              </div>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2 text-sm">
+              <span className="rounded-full bg-teal/15 px-3 py-1 text-teal">
+                Senior
+              </span>
+              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">
+                Full-time
+              </span>
+              <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">
+                Remoto
+              </span>
+            </div>
+            <p className="mt-5 text-sm leading-relaxed text-zinc-300">
+              “Subí mi perfil un lunes y el jueves ya tenía una propuesta
+              alineada con lo que buscaba.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
