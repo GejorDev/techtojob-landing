@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <a href="#inicio" className="inline-block" aria-label="Volver al inicio de TechToJob">
               <Image
-                src="/LogotiposTechToJob/SVG/v1Positivo.svg"
+                src="/v1Positivo.svg"
                 alt="Logo de TechToJob"
                 width={180}
                 height={30}

@@ -42,7 +42,7 @@ Cambios respecto al brief:
 
 ## Origen de los recursos visuales
 
-- **Logos**: `public/LogotiposTechToJob/` (SVG facilitados por la organización).
+- **Logos**: `public/` (SVG facilitados por la organización).
   Se usa `v1Positivo.svg` en fondos claros (header y footer) y
   `SímboloNegativo.svg` (versión teal) sobre el fondo oscuro del hero.
 - **Iconos**: [Lucide](https://lucide.dev) — licencia ISC, uso libre comercial.
