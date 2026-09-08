@@ -68,7 +68,7 @@ export default function Newsletter() {
                   if (estado === "error") setEstado("idle");
                 }}
                 placeholder="tu@correo.com"
-                className="h-13 flex-1 rounded-full border-2 border-ink/20 bg-paper px-5 text-ink placeholder:text-ink-muted focus:border-ink focus:outline-none"
+                className="h-13 max-sm:h-17 flex-1 rounded-full border-2 border-ink/20 bg-paper px-5 text-base text-ink placeholder:text-ink-muted focus:border-ink focus:outline-none"
                 aria-describedby={estado === "error" ? "correo-error" : undefined}
                 aria-invalid={estado === "error"}
               />

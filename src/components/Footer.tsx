@@ -39,7 +39,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-line bg-mist">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <a href="#inicio" className="inline-block" aria-label="Volver al inicio de TechToJob">
               <Image

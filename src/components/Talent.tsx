@@ -31,12 +31,14 @@ export default function Talent() {
           </p>
           <ul className="mt-7 divide-y divide-line">
             {skills.map((item) => (
-              <li key={item.etiqueta} className="flex items-center gap-4 py-3">
-                <item.icono className="h-5 w-5 shrink-0 text-teal-dark" aria-hidden="true" />
-                <span className="w-36 shrink-0 font-semibold text-ink">
-                  {item.etiqueta}
-                </span>
-                <span className="text-ink-muted">{item.detalle}</span>
+              <li key={item.etiqueta} className="flex items-start gap-4 py-3 sm:items-center">
+                <item.icono className="mt-0.5 h-5 w-5 shrink-0 text-teal-dark sm:mt-0" aria-hidden="true" />
+                <div className="min-w-0 sm:flex sm:items-center sm:gap-4">
+                  <span className="block font-semibold text-ink sm:w-32 sm:shrink-0">
+                    {item.etiqueta}
+                  </span>
+                  <span className="block text-ink-muted">{item.detalle}</span>
+                </div>
               </li>
             ))}
           </ul>
