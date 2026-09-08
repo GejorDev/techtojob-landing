@@ -23,11 +23,12 @@ export default function Networking() {
             id="networking-titulo"
             className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
           >
-            Una red de personas del sector, no una lista de contactos
+            Enterarse a tiempo vale más que un CV perfecto
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-            Canales por área donde se conversa, se consulta y se recomienda.
-            Aquí se conocen las personas antes de intercambiar currículums.
+            Canales por área con gente del sector que resuelve dudas en minutos
+            y comparte ofertas que no están en ningún portal. Los buenos trabajos
+            no se encuentran: se enteran.
           </p>
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">
             {canales.map((canal) => (
@@ -45,7 +46,7 @@ export default function Networking() {
             ))}
           </ul>
           <a
-            href="https://discord.gg/techtojob"
+            href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition-colors hover:bg-ink-soft"
@@ -61,7 +62,7 @@ export default function Networking() {
             </div>
             <div>
               <p className="font-semibold text-ink">#carrera-y-salario</p>
-              <p className="text-sm text-ink-muted">248 personas conectadas</p>
+              <p className="text-sm text-ink-muted">Gente del sector conectada</p>
             </div>
           </div>
           <div className="space-y-4 pt-5">
@@ -70,13 +71,13 @@ export default function Networking() {
                 autor: "Lucía",
                 rol: "Junior React",
                 texto:
-                  "¿Alguien recomienda una buena guía para preparar entrevistas de frontend en español?",
+                  "Alguien del canal me avisó de una vacante que nunca se publicó en LinkedIn. Me la llevé.",
               },
               {
                 autor: "Diego",
                 rol: "Ing. de software",
                 texto:
-                  "Te comparto la que usé yo: ejercicios de lógica + un mini proyecto propio. Eso pesa más que mil teoría.",
+                  "El otro día alguien preguntó por su stack y terminé recomendándolo para un proyecto. Conocer a la gente aquí abre puertas que un CV no.",
               },
             ].map((mensaje, i) => (
               <article key={i} className="rounded-2xl bg-mist p-4">

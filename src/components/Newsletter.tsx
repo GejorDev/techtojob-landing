@@ -28,11 +28,13 @@ export default function Newsletter() {
               id="newsletter-titulo"
               className="text-3xl font-bold tracking-tight text-ink"
             >
-              Novedades, cada semana, sin ruido
+              Lo mejor de la semana, en tu correo
             </h2>
             <p className="mt-3 text-lg leading-relaxed text-ink/80">
-              Un correo semanal con torneos, ofertas y oportunidades de la
-              comunidad. Nada de spam: puedes darte de baja cuando quieras.
+              Un correo los lunes con torneos abiertos, ofertas que alguien
+              de la comunidad ha compartido y lo que no vas a encontrar en
+              LinkedIn. Uno a la semana, nada de spam, date de baja cuando
+              quieras.
             </p>
           </div>
 
@@ -74,7 +76,7 @@ export default function Newsletter() {
                 type="submit"
                 className="inline-flex h-13 items-center justify-center rounded-full bg-ink px-7 font-semibold text-white transition-colors hover:bg-ink-soft"
               >
-                Suscribirme
+                Quiero recibirlas
               </button>
             </form>
           )}

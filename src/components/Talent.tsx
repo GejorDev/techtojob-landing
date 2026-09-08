@@ -22,12 +22,12 @@ export default function Talent() {
             id="talento-titulo"
             className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
           >
-            Ofrécete como talento y deja que te encuentren
+            Crea tu perfil y deja que te encuentren
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-            No mandas tu CV a un agujero negro: construyes un perfil público
-            que las empresas ven, y que tú controlas. Mientras participas en la
-            comunidad, tu perfil habla por ti.
+            Tu perfil lo lee una persona real, no un algoritmo que te descarta
+            antes de que te conozca. No necesitas ser senior: junior, mid o en
+            transición, aquí tienes sitio. Y no cuesta nada.
           </p>
           <ul className="mt-7 divide-y divide-line">
             {skills.map((item) => (
@@ -41,7 +41,7 @@ export default function Talent() {
             ))}
           </ul>
           <a
-            href="https://discord.gg/techtojob"
+            href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition-colors hover:bg-ink-soft"
@@ -76,8 +76,8 @@ export default function Talent() {
               </span>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-zinc-300">
-              “Subí mi perfil un lunes y el jueves ya tenía una propuesta
-              alineada con lo que buscaba.”
+              "Mi perfil hablaba por mí antes de la entrevista. Ya sabían qué
+              sabía hacer, y la conversación fue directa."
             </p>
           </div>
         </div>

@@ -29,9 +29,10 @@ const bloques = [
 ];
 
 const redes = [
-  { nombre: "Discord", href: "https://discord.gg/techtojob" },
-  { nombre: "LinkedIn", href: "https://www.linkedin.com/company/techtojob" },
-  { nombre: "GitHub", href: "https://github.com/GejorDev/techtojob-landing" },
+  { nombre: "Discord", href: "https://discord.gg/h9FFgKdkRd" },
+  { nombre: "LinkedIn", href: "https://www.linkedin.com/company/techtojob/" },
+  { nombre: "X", href: "https://x.com/techtojob" },
+  { nombre: "Instagram", href: "https://www.instagram.com/techtojob" },
 ];
 
 export default function Footer() {

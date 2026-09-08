@@ -1,8 +1,8 @@
 const noticias = [
   {
-    titulo: "Se abre el Torneo #2: construye la landing de TechToJob",
+    titulo: "Torneo #2: construye la landing de TechToJob",
     resumen:
-      "Las bases del segundo torneo, los plazos para entregar y qué valoramos en el diseño, el desarrollo y el SEO.",
+      "Retos reales, un jurado con criterios públicos y el código que se usa. Así fue el torneo que creó esta web.",
     categoria: "Torneos",
     fecha: "7 de septiembre de 2026",
     href: "#torneos",
@@ -10,15 +10,15 @@ const noticias = [
   {
     titulo: "Nuevos canales de networking por stack",
     resumen:
-      "Dividimos el servidor en canales por área para que encuentres a tu gente y mejores más rápido.",
+      "Canales por área para que encuentres a tu gente, resuelvas dudas rápido y te enteres de oportunidades que no llegan a ningún portal.",
     categoria: "Comunidad",
     fecha: "2 de septiembre de 2026",
     href: "#networking",
   },
   {
-    titulo: "Cómo se prepara una entrevista técnica de frontend",
+    titulo: "Cómo preparar una entrevista técnica de frontend",
     resumen:
-      "Una guía con pasos concretos: lógica, proyecto propio y cómo contar lo que sabes sin quedarte corto.",
+      "Lógica, proyecto propio y cómo contar lo que sabes sin quedarte corto. Una guía que sale de la experiencia de la comunidad.",
     categoria: "Carrera",
     fecha: "25 de agosto de 2026",
     href: "#networking",

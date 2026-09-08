@@ -3,23 +3,23 @@ import { MessagesSquare, UserRoundPlus, Sparkles } from "lucide-react";
 const pasos = [
   {
     numero: "01",
-    titulo: "Entras a la comunidad",
+    titulo: "Entra y preséntate",
     texto:
-      "Te unes al Discord y eliges tus canales por stack, nivel e intereses. Nada de CVs genéricos ni portales interminables.",
+      "Únete al Discord, explora los canales por stack y cuéntales a quién le hablas. Sin formularios, sin colas.",
     icono: MessagesSquare,
   },
   {
     numero: "02",
-    titulo: "Publicas tu perfil",
+    titulo: "Participa",
     texto:
-      "Compartes tu stack, tu nivel y tu disponibilidad. La comunidad te conoce por lo que haces y por cómo lo explicas.",
+      "Responde dudas, comparte lo que construyes, apúntate a un torneo. Cuanto más participas, más te conoce la comunidad.",
     icono: UserRoundPlus,
   },
   {
     numero: "03",
-    titulo: "Llegan las oportunidades",
+    titulo: "Aparecen oportunidades",
     texto:
-      "Empresas que ya saben qué buscan te encuentran o te proponen algo. Tú decides si encaja o esperas a la siguiente.",
+      "Empresas que ya saben cómo trabajas te contactan directamente. No rellenas un formulario y rezas: tú decides si encaja.",
     icono: Sparkles,
   },
 ];
@@ -43,8 +43,8 @@ export default function HowItWorks() {
             Del primer mensaje a una oportunidad real
           </h2>
           <p className="mt-4 text-lg text-ink-muted">
-            Sin formularios eternos ni algoritmos opacos: participas, te haces
-            visible y las oportunidades aparecen.
+            No hay formularios interminables ni algoritmos que te descarten sin leer.
+            Participas, te haces visible y las oportunidades salen de ahí.
           </p>
         </div>
 

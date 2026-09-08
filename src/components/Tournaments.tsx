@@ -1,9 +1,9 @@
 import { Trophy, Users, Zap } from "lucide-react";
 
 const premios = [
-  { texto: "Nuevo Discord Nitro y recompensas", icono: Zap },
-  { texto: "Visibilidad de perfiles", icono: Users },
-  { texto: "Conexiones con empresas", icono: Trophy },
+  { texto: "Recompensas y reconocimiento", icono: Zap },
+  { texto: "Visibilidad ante la comunidad y empresas", icono: Users },
+  { texto: "Algo real que enseñar en una entrevista", icono: Trophy },
 ];
 
 export default function Tournaments() {
@@ -23,15 +23,16 @@ export default function Tournaments() {
               id="torneos-titulo"
               className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
             >
-              Compite, aprende y demuestra lo que vales
+              Compite, aprende y dale cara a tu código
             </h2>
             <p className="mt-4 text-lg text-ink-muted">
-              Torneos abiertos donde resuelves retos reales, comparas tu
-              código y construyes un portafolio que habla por ti.
+              Retos reales, entregas con plazo y jurado con criterios públicos.
+              Sirven para aprender, para tener algo que contar en una entrevista
+              y para que la comunidad sepa quién eres. Esta web salió de uno.
             </p>
           </div>
           <a
-            href="https://discord.gg/techtojob"
+            href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-12 w-fit items-center rounded-full border border-ink px-7 text-base font-semibold text-ink transition-colors hover:bg-ink hover:text-white"
@@ -55,9 +56,8 @@ export default function Tournaments() {
                 Construye una landing de verdad
               </h3>
               <p className="mt-3 leading-relaxed text-zinc-300">
-                La puerta de entrada de la comunidad: explica qué hacemos,
-                convence a quien entra y consigue un click al Discord. SEO,
-                diseño y desarrollo real de principio a fin.
+                Diseña, desarrolla y despliega la puerta de entrada de la comunidad.
+                SEO, diseño y código real. Lo que construyas aquí se usa y se ve.
               </p>
               <a
                 href="#noticias"

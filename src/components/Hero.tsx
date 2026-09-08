@@ -17,16 +17,17 @@ export default function Hero() {
             id="hero-titulo"
             className="mt-6 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            La comunidad de desarrolladores y empresas tech en español
+            Deja de mandar CVs al vacío
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300">
-            TechToJob no es un portal de empleo más: es una comunidad donde
-            compartes tu perfil, te conocen por lo que haces y llegan
-            oportunidades reales. Entra, participa y decide hacia dónde vas.
+            TechToJob es una comunidad de desarrolladores y empresas tech en español.
+            No es un portal donde desapareces entre cientos de candidaturas:
+            aquí participas, te conocen y las oportunidades llegan por lo que haces,
+            no por lo que pones en un formulario.
           </p>
           <div className="mt-8">
             <a
-              href="https://discord.gg/techtojob"
+              href="https://discord.gg/h9FFgKdkRd"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-13 items-center justify-center rounded-full bg-teal px-9 text-lg font-semibold text-ink transition-colors hover:bg-teal-dark"
@@ -35,7 +36,7 @@ export default function Hero() {
             </a>
           </div>
           <p className="mt-6 text-sm text-zinc-400">
-            Gratis para talento. Empresas publican sin coste para empezar.
+            Entrar es gratis. No hay letra pequeña.
           </p>
         </div>
 

@@ -52,7 +52,7 @@ export default function Companies() {
               </li>
             </ul>
             <div className="mt-6 border-t border-line pt-5">
-              <p className="text-sm font-medium text-ink">Candidatos que llegaron</p>
+              <p className="text-sm font-medium text-ink">Candidatos de la comunidad</p>
               <div className="mt-3 flex -space-x-2" aria-hidden="true">
                 {["D", "J", "A", "S"].map((inicial, i) => (
                   <div
@@ -64,9 +64,6 @@ export default function Companies() {
                     {inicial}
                   </div>
                 ))}
-                <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-paper bg-mist text-xs font-semibold text-ink-muted">
-                  +34
-                </div>
               </div>
             </div>
           </div>
@@ -80,12 +77,12 @@ export default function Companies() {
             id="empresas-titulo"
             className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
           >
-            Publica como empresa y llega a talento que ya demuestra
+            Publica tu vacante y conoce a la gente antes de contratar
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-            Olvídate de preseleccionar currículums sin contexto. Publica lo que
-            necesitas y accede a perfiles de personas que ya se han hecho
-            visibles participando.
+            Aquí ves a la gente trabajar antes de revisar su CV. Torneos,
+            contribuciones y conversaciones te dan más contexto que cualquier
+            carta de presentación.
           </p>
           <ul className="mt-7 space-y-5">
             {beneficios.map((item) => (
@@ -103,7 +100,7 @@ export default function Companies() {
             ))}
           </ul>
           <a
-            href="https://discord.gg/techtojob"
+            href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition-colors hover:bg-ink-soft"

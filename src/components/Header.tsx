@@ -9,6 +9,7 @@ const navLinks = [
   { href: "#talento", label: "Talento" },
   { href: "#empresas", label: "Empresas" },
   { href: "#torneos", label: "Torneos" },
+  { href: "#networking", label: "Networking" },
   { href: "#noticias", label: "Noticias" },
 ];
 
@@ -50,7 +51,7 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <a
-            href="https://discord.gg/techtojob"
+            href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 items-center rounded-full bg-ink px-5 text-sm font-semibold text-white transition-colors hover:bg-ink-soft max-lg:hidden"
@@ -94,7 +95,7 @@ export default function Header() {
             ))}
           </ul>
           <a
-            href="https://discord.gg/techtojob"
+            href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex h-11 w-full items-center justify-center rounded-full bg-ink font-semibold text-white"

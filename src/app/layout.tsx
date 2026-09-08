@@ -62,9 +62,10 @@ const jsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/v1Positivo.svg`,
   sameAs: [
-    "https://discord.gg/techtojob",
-    "https://www.linkedin.com/company/techtojob",
-    "https://github.com/GejorDev/techtojob-landing",
+    "https://discord.gg/h9FFgKdkRd",
+    "https://www.linkedin.com/company/techtojob/",
+    "https://x.com/techtojob",
+    "https://www.instagram.com/techtojob",
   ],
 };
 
