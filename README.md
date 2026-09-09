@@ -25,6 +25,18 @@ bordes, como permite el brief. El teal nunca se usa como texto de párrafo:
 sobre blanco no alcanza el contraste AA, por eso va solo en fondos, botones y
 detalles (mismas indicaciones del brief).
 
+## Animaciones
+
+Sin JavaScript ni dependencias externas: todo es CSS nativo sobre Tailwind v4.
+
+- **Hero**: entrada con fade-up escalonado al cargar (badge, título, párrafo, CTA).
+- **Cards**: reveal al scroll con scroll-driven animations
+  (`animation-timeline: view()`), sin IntersectionObserver.
+- **Micro-interacciones**: cards con elevación y sombra al hover, subrayado
+  animado en los números de pasos (`group-hover`), botones con `active:scale`.
+- **Accesibilidad**: reset global con `prefers-reduced-motion` que anula
+  animaciones y transiciones de un tiro.
+
 ## Orden de secciones
 
 El brief marca el orden como orientativo salvo hero y footer. Mantengo el orden
@@ -60,8 +72,8 @@ Cambios respecto al brief:
 - HTML semántico: `header`, `nav`, `main`, `section`, `article`, `footer`;
   todo lo que navega es `<a>`, nada de div clicables.
 - URLs de anclas legibles: `#como-funciona`, `#talento`, `#empresas`,
-  `#torneos`, `#noticias`, `#newsletter`.
-- Páginas legales reales (`/privacidad`, `/legal`, `/cookies`) para que los
+  `#torneos`, `#networking`, `#noticias`, `#newsletter`.
+- Páginas legales reales (`/privacy`, `/legal`, `/cookies`) para que los
   enlaces del footer no queden en 404 en la publicación.
 
 ## Estructura de rutas
@@ -78,7 +90,7 @@ src/app/
   (landing)/
     layout.tsx            # Header + main + Footer
     page.tsx              # home (hero…cierre)
-    privacidad/page.tsx   # política de privacidad
+    privacy/page.tsx      # política de privacidad
     legal/page.tsx        # aviso legal
     cookies/page.tsx      # política de cookies
 ```
