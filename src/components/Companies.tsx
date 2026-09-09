@@ -29,8 +29,8 @@ export default function Companies() {
       aria-labelledby="empresas-titulo"
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-24">
-        <div className="order-2 lg:order-1">
-          <div className="rounded-3xl border border-line bg-paper p-8 sm:p-10">
+        <div className="order-2 animate-view lg:order-1">
+          <div className="rounded-3xl border border-line bg-paper p-8 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/5 sm:p-10">
             <div className="flex items-center justify-between">
               <p className="font-semibold text-ink">Vacante · Backend Node</p>
               <span className="rounded-full bg-teal/15 px-3 py-1 text-sm font-medium text-ink">
@@ -84,7 +84,7 @@ export default function Companies() {
             contribuciones y conversaciones te dan más contexto que cualquier
             carta de presentación.
           </p>
-          <ul className="mt-7 space-y-5">
+          <ul className="mt-7 animate-view space-y-5">
             {beneficios.map((item) => (
               <li key={item.titulo} className="flex gap-4">
                 <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal/15">
@@ -103,7 +103,7 @@ export default function Companies() {
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition-colors hover:bg-ink-soft"
+            className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98]"
           >
             Publicar una vacante
           </a>

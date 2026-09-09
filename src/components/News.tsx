@@ -53,7 +53,7 @@ export default function News() {
           {noticias.map((noticia) => (
             <article
               key={noticia.titulo}
-              className="flex flex-col rounded-2xl border border-line bg-mist p-6 transition-colors hover:border-teal"
+              className="flex animate-view flex-col rounded-2xl border border-line bg-mist p-6 transition duration-200 hover:-translate-y-1 hover:border-teal hover:shadow-lg hover:shadow-ink/5"
             >
               <div className="flex items-center gap-3 text-sm">
                 <span className="rounded-full bg-teal/15 px-3 py-1 font-medium text-ink">

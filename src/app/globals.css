@@ -35,8 +35,38 @@ body {
   color: #2f3436;
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.7s ease-out backwards;
+}
+
+@utility animate-view {
+  animation: fade-up 0.7s ease-out backwards;
+  animation-timeline: view();
+  animation-range: entry 0% entry 40%;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-timeline: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

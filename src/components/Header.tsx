@@ -54,7 +54,7 @@ export default function Header() {
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-10 items-center rounded-full bg-ink px-5 text-sm font-semibold text-white transition-colors hover:bg-ink-soft max-lg:hidden"
+            className="inline-flex h-10 items-center rounded-full bg-ink px-5 text-sm font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98] max-lg:hidden"
           >
             Entrar al Discord
           </a>
@@ -98,7 +98,7 @@ export default function Header() {
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex h-11 w-full items-center justify-center rounded-full bg-ink font-semibold text-white"
+            className="mt-5 inline-flex h-11 w-full items-center justify-center rounded-full bg-ink font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98]"
           >
             Entrar al Discord
           </a>

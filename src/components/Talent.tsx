@@ -46,14 +46,14 @@ export default function Talent() {
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition-colors hover:bg-ink-soft"
+            className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98]"
           >
             Publicar mi perfil
           </a>
         </div>
 
         <div
-          className="rounded-3xl bg-ink p-8 text-white sm:p-10"
+          className="animate-view rounded-3xl bg-ink p-8 text-white transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/10 sm:p-10"
           aria-hidden="true"
         >
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6">

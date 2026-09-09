@@ -41,7 +41,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <a href="#inicio" className="inline-block" aria-label="Volver al inicio de TechToJob">
+            <a href="#inicio" className="inline-block transition-opacity hover:opacity-80" aria-label="Volver al inicio de TechToJob">
               <Image
                 src="/v1Positivo.svg"
                 alt="Logo de TechToJob"

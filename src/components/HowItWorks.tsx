@@ -52,7 +52,7 @@ export default function HowItWorks() {
           {pasos.map((paso) => (
             <li
               key={paso.numero}
-              className="rounded-2xl border border-line bg-paper p-7"
+              className="group animate-view rounded-2xl border border-line bg-paper p-7 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/5"
             >
               <div className="flex items-center justify-between">
                 <span className="text-4xl font-bold text-teal" aria-hidden="true">
@@ -60,7 +60,7 @@ export default function HowItWorks() {
                 </span>
                 <paso.icono className="h-6 w-6 text-teal-dark" aria-hidden="true" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-ink">
+              <h3 className="relative mt-4 w-fit pb-1 text-xl font-semibold text-ink transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-teal after:transition-transform after:duration-200 group-hover:after:scale-x-100">
                 {paso.titulo}
               </h3>
               <p className="mt-3 leading-relaxed text-ink-muted">

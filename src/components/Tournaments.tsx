@@ -35,13 +35,13 @@ export default function Tournaments() {
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-12 w-fit items-center rounded-full border border-ink px-7 text-base font-semibold text-ink transition-colors hover:bg-ink hover:text-white"
+            className="inline-flex h-12 w-fit items-center rounded-full border border-ink px-7 text-base font-semibold text-ink transition hover:bg-ink hover:text-white active:scale-[0.98]"
           >
             Ver torneos abiertos
           </a>
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-3xl bg-ink text-white">
+        <div className="mt-12 animate-view overflow-hidden rounded-3xl bg-ink text-white">
           <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-2 lg:items-start">
             <div>
               <div className="flex items-center gap-3">
@@ -61,7 +61,7 @@ export default function Tournaments() {
               </p>
               <a
                 href="#noticias"
-                className="mt-6 inline-flex h-11 items-center rounded-full bg-teal px-6 text-sm font-semibold text-ink transition-colors hover:bg-teal-dark"
+                className="mt-6 inline-flex h-11 items-center rounded-full bg-teal px-6 text-sm font-semibold text-ink transition hover:bg-teal-dark active:scale-[0.98]"
               >
                 Apuntarme al torneo
               </a>
@@ -70,7 +70,7 @@ export default function Tournaments() {
               {premios.map((premio) => (
                 <li
                   key={premio.texto}
-                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-zinc-200"
+                  className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-zinc-200 transition duration-200 hover:-translate-y-0.5 hover:bg-white/10"
                 >
                   <premio.icono className="h-5 w-5 shrink-0 text-teal" aria-hidden="true" />
                   {premio.texto}

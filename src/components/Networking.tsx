@@ -49,7 +49,7 @@ export default function Networking() {
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition-colors hover:bg-ink-soft"
+            className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98]"
           >
             Explorar los canales
           </a>
