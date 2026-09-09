@@ -39,7 +39,7 @@ export default function Hero() {
 
         <div className="relative hidden justify-center lg:flex" aria-hidden="true">
           <Image
-            src="/SímboloNegativo.svg"
+            src="/logo-negative.svg"
             alt=""
             width={400}
             height={400}

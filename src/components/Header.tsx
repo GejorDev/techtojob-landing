@@ -25,7 +25,7 @@ export default function Header() {
           aria-label="TechToJob, volver al inicio"
         >
           <Image
-            src="/v1Positivo.svg"
+            src="/logo-positive.svg"
             alt="Logo de TechToJob"
             width={180}
             height={30}

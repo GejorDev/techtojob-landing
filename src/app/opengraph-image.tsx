@@ -21,7 +21,7 @@ const fontData = {
 
 // Símbolo oficial de la marca (versión negativa, teal sobre fondo oscuro).
 const symbolSvg = readFileSync(
-  path.join(process.cwd(), "public/SímboloNegativo.svg"),
+  path.join(process.cwd(), "public/logo-negative.svg"),
   "utf8"
 );
 const symbolD = symbolSvg.match(/<path[^>]*\sd="([^"]+)"/)?.[1];

@@ -21,7 +21,7 @@ const bloques = [
   {
     titulo: "Legal",
     enlaces: [
-      { texto: "Política de privacidad", href: "/privacidad" },
+      { texto: "Política de privacidad", href: "/privacy" },
       { texto: "Aviso legal", href: "/legal" },
       { texto: "Cookies", href: "/cookies" },
     ],
@@ -43,7 +43,7 @@ export default function Footer() {
           <div>
             <a href="#inicio" className="inline-block transition-opacity hover:opacity-80" aria-label="Volver al inicio de TechToJob">
               <Image
-                src="/v1Positivo.svg"
+                src="/logo-positive.svg"
                 alt="Logo de TechToJob"
                 width={180}
                 height={30}

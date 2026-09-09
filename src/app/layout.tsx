@@ -60,7 +60,7 @@ const jsonLd = {
   "@type": "Organization",
   name: "TechToJob",
   url: siteUrl,
-  logo: `${siteUrl}/v1Positivo.svg`,
+  logo: `${siteUrl}/logo-positive.svg`,
   sameAs: [
     "https://discord.gg/h9FFgKdkRd",
     "https://www.linkedin.com/company/techtojob/",

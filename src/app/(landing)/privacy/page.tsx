@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Política de privacidad",
   description:
     "Cómo TechToJob trata los datos personales de los miembros de la comunidad, qué información se recoge y tus derechos.",
-  alternates: { canonical: "/privacidad" },
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
