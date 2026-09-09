@@ -11,7 +11,7 @@ export default function Hero() {
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-teal/30 bg-teal/10 px-4 py-1.5 text-sm font-medium text-teal">
             <span className="h-2 w-2 rounded-full bg-teal" aria-hidden="true" />
-            Comunidad abierta · Torneos en curso
+            Comunidad abierta
           </p>
           <h1
             id="hero-titulo"
@@ -35,9 +35,6 @@ export default function Hero() {
               Entrar al Discord
             </a>
           </div>
-          <p className="mt-6 text-sm text-zinc-400">
-            Entrar es gratis. No hay letra pequeña.
-          </p>
         </div>
 
         <div className="relative hidden justify-center lg:flex" aria-hidden="true">
