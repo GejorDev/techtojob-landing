@@ -9,6 +9,7 @@ de desarrolladores y empresas tech en español.
 - **Tailwind CSS v4** (obligatorio en las bases del torneo)
 - **Sora** vía `next/font/google` (única fuente, autoalojada, tres pesos: 400/600/700)
 - Iconos: **Lucide** (`lucide-react`)
+- **next-intl** para i18n (español en `/`, inglés en `/en`)
 
 ## Paleta
 
@@ -63,36 +64,59 @@ Cambios respecto al brief:
 
 ## SEO
 
-- `<html lang="es">`, un solo `<h1>`, jerarquía h2/h3 sin saltos.
+- `<html lang>` dinámico por locale, un solo `<h1>`, jerarquía h2/h3 sin saltos.
 - Metadata API de Next con `title.template` (`%s | TechToJob`), `metadataBase`
   y `description` en el layout.
 - Open Graph y Twitter Card completos. La imagen OG (1200×630) se genera con
-  `next/og` (ImageResponse) en `src/app/opengraph-image.tsx`.
+  `next/og` (ImageResponse) en `src/app/[locale]/opengraph-image.tsx`.
 - JSON-LD `Organization` con nombre, URL, logo y redes en el layout.
 - HTML semántico: `header`, `nav`, `main`, `section`, `article`, `footer`;
   todo lo que navega es `<a>`, nada de div clicables.
 - URLs de anclas legibles: `#como-funciona`, `#talento`, `#empresas`,
   `#torneos`, `#networking`, `#noticias`, `#newsletter`.
-- Páginas legales reales (`/privacy`, `/legal`, `/cookies`) para que los
-  enlaces del footer no queden en 404 en la publicación.
+- Páginas legales reales (`/privacy`, `/legal`, `/cookies`, y sus versiones en
+  `/en/…`) para que los enlaces del footer no queden en 404 en la publicación.
+
+## Internacionalización
+
+Cada locale es un segmento dinámico `[locale]` con prerender estático
+(`generateStaticParams` → `['es', 'en']`). El texto del sitio vive en
+`messages/{locale}.json`, nunca en los componentes.
+
+- **`src/i18n/routing.ts`** — define `['es', 'en']`, default `es` y
+  `localePrefix: 'as-needed'` (español en `/` sin prefijo, inglés en `/en`).
+- **`src/i18n/navigation.ts`** — wrappers tipados de `Link`/`useRouter`/
+  `usePathname` que ya manejan el locale.
+- **`src/i18n/request.ts`** — carga `messages/{locale}.json` por request.
+- **`src/proxy.ts`** — detección de idioma del navegador (`Accept-Language`,
+  cookie `NEXT_LOCALE`) y redirección a la ruta correcta. Es la convención
+  `proxy` de Next 16 (reemplaza al `middleware` deprecado).
+- Selector **ES | EN** en el header para cambiar de idioma sin perder la ruta.
 
 ## Estructura de rutas
 
-El contenido usa una route group `(landing)` cuyo layout aplica
-`Header` + `Footer`. Las páginas legales viven dentro del grupo para
-heredar ese marco:
+El segmento `[locale]` es la raíz efectiva: su layout aplica
+`Header` + `Footer` y el `html lang` por idioma. Las páginas legales viven en
+el mismo segmento para heredar el marco:
 
 ```
-src/app/
-  layout.tsx              # raíz: metadata, JSON-LD, fuentes
-  globals.css             # tokens de Tailwind v4
-  opengraph-image.tsx     # imagen OG 1200×630 (next/og)
-  (landing)/
-    layout.tsx            # Header + main + Footer
-    page.tsx              # home (hero…cierre)
-    privacy/page.tsx      # política de privacidad
-    legal/page.tsx        # aviso legal
-    cookies/page.tsx      # política de cookies
+src/
+  app/
+    globals.css             # tokens de Tailwind v4
+    icon.svg                # favicon compartido entre locales
+    [locale]/
+      layout.tsx            # raíz: metadata, JSON-LD, fuentes, Header/Footer
+      page.tsx              # home (hero…cierre)
+      privacy/page.tsx      # política de privacidad
+      legal/page.tsx        # aviso legal
+      cookies/page.tsx      # política de cookies
+      opengraph-image.tsx   # imagen OG 1200×630 (next/og)
+  components/               # secciones + Header con nav y selector de idioma
+  i18n/                     # routing, navigation, request, tipos de mensajes
+  proxy.ts                  # detección/redirección de locale (Next 16)
+messages/
+  es.json                   # textos en español (default)
+  en.json                   # textos en inglés
 ```
 
 ## Configuración
