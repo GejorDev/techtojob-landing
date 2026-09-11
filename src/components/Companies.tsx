@@ -1,27 +1,15 @@
 import { FileText, Users, Search } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-const beneficios = [
-  {
-    titulo: "Publica lo que buscas",
-    texto:
-      "Un requerimiento claro llega a personas que ya se saben mover en la comunidad, no a bandejas de entrada saturadas.",
-    icono: FileText,
-  },
-  {
-    titulo: "Accede a perfiles reales",
-    texto:
-      "Cada perfil muestra stack, nivel y disponibilidad con el respaldo de su participación en la comunidad.",
-    icono: Users,
-  },
-  {
-    titulo: "Conócelos por lo que hacen",
-    texto:
-      "Torneos, aportes y conversaciones te dicen más que un CV. Sabes con quién hablas antes de la primera entrevista.",
-    icono: Search,
-  },
-];
+const iconos = [FileText, Users, Search];
 
-export default function Companies() {
+type Beneficio = { title: string; text: string };
+
+export default async function Companies() {
+  const t = await getTranslations("companies");
+  const beneficios = t.raw("benefits") as Beneficio[];
+  const requisitos = t.raw("card.requirements") as string[];
+
   return (
     <section
       id="empresas"
@@ -32,27 +20,23 @@ export default function Companies() {
         <div className="order-2 animate-view lg:order-1">
           <div className="rounded-3xl border border-line bg-paper p-8 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/5 sm:p-10">
             <div className="flex items-center justify-between">
-              <p className="font-semibold text-ink">Vacante · Backend Node</p>
+              <p className="font-semibold text-ink">{t("card.job")}</p>
               <span className="rounded-full bg-teal/15 px-3 py-1 text-sm font-medium text-ink">
-                Abierta
+                {t("card.status")}
               </span>
             </div>
             <ul className="mt-5 space-y-3 text-sm text-ink-muted">
-              <li className="flex gap-2.5">
-                <span className="text-teal-dark" aria-hidden="true">✓</span>
-                Node.js y TypeScript
-              </li>
-              <li className="flex gap-2.5">
-                <span className="text-teal-dark" aria-hidden="true">✓</span>
-                Entre 3 y 5 años de experiencia
-              </li>
-              <li className="flex gap-2.5">
-                <span className="text-teal-dark" aria-hidden="true">✓</span>
-                Remoto o híbrido en España
-              </li>
+              {requisitos.map((requisito) => (
+                <li key={requisito} className="flex gap-2.5">
+                  <span className="text-teal-dark" aria-hidden="true">
+                    ✓
+                  </span>
+                  {requisito}
+                </li>
+              ))}
             </ul>
             <div className="mt-6 border-t border-line pt-5">
-              <p className="text-sm font-medium text-ink">Candidatos de la comunidad</p>
+              <p className="text-sm font-medium text-ink">{t("card.candidates")}</p>
               <div className="mt-3 flex -space-x-2" aria-hidden="true">
                 {["D", "J", "A", "S"].map((inicial, i) => (
                   <div
@@ -71,33 +55,34 @@ export default function Companies() {
 
         <div className="order-1 lg:order-2">
           <p className="text-sm font-semibold uppercase tracking-widest text-ink-muted">
-            Para empresas
+            {t("eyebrow")}
           </p>
           <h2
             id="empresas-titulo"
             className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
           >
-            Publica tu vacante y conoce a la gente antes de contratar
+            {t("title")}
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-ink-muted">
-            Aquí ves a la gente trabajar antes de revisar su CV. Torneos,
-            contribuciones y conversaciones te dan más contexto que cualquier
-            carta de presentación.
+            {t("subtitle")}
           </p>
           <ul className="mt-7 animate-view space-y-5">
-            {beneficios.map((item) => (
-              <li key={item.titulo} className="flex gap-4">
-                <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal/15">
-                  <item.icono className="h-4 w-4 text-teal-dark" aria-hidden="true" />
-                </span>
-                <div>
-                  <h3 className="font-semibold text-ink">{item.titulo}</h3>
-                  <p className="mt-1 leading-relaxed text-ink-muted">
-                    {item.texto}
-                  </p>
-                </div>
-              </li>
-            ))}
+            {beneficios.map((item, i) => {
+              const Icono = iconos[i] ?? iconos[0];
+              return (
+                <li key={item.title} className="flex gap-4">
+                  <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal/15">
+                    <Icono className="h-4 w-4 text-teal-dark" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3 className="font-semibold text-ink">{item.title}</h3>
+                    <p className="mt-1 leading-relaxed text-ink-muted">
+                      {item.text}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
           <a
             href="https://discord.gg/h9FFgKdkRd"
@@ -105,7 +90,7 @@ export default function Companies() {
             rel="noopener noreferrer"
             className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98]"
           >
-            Publicar una vacante
+            {t("cta")}
           </a>
         </div>
       </div>

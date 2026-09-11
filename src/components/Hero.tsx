@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
-export default function Hero() {
+export default async function Hero() {
+  const t = await getTranslations("hero");
+
   return (
     <section
       id="inicio"
@@ -11,19 +14,16 @@ export default function Hero() {
         <div>
           <p className="inline-flex animate-fade-up items-center gap-2 rounded-full border border-teal/30 bg-teal/10 px-4 py-1.5 text-sm font-medium text-teal">
             <span className="h-2 w-2 rounded-full bg-teal" aria-hidden="true" />
-            Comunidad abierta
+            {t("badge")}
           </p>
           <h1
             id="hero-titulo"
             className="mt-6 animate-fade-up text-4xl font-bold leading-tight tracking-tight text-white [animation-delay:80ms] sm:text-5xl lg:text-6xl"
           >
-            Deja de mandar CVs al vacío
+            {t("title")}
           </h1>
           <p className="mt-6 max-w-xl animate-fade-up text-lg leading-relaxed text-zinc-300 [animation-delay:160ms]">
-            TechToJob es una comunidad de desarrolladores y empresas tech en español.
-            No es un portal donde desapareces entre cientos de candidaturas:
-            aquí participas, te conocen y las oportunidades llegan por lo que haces,
-            no por lo que pones en un formulario.
+            {t("subtitle")}
           </p>
           <div className="mt-8 animate-fade-up [animation-delay:240ms]">
             <a
@@ -32,7 +32,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="inline-flex h-13 items-center justify-center rounded-full bg-teal px-9 text-lg font-semibold text-ink transition hover:bg-teal-dark active:scale-[0.98]"
             >
-              Entrar al Discord
+              {t("cta")}
             </a>
           </div>
         </div>

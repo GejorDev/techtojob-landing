@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "title": "TechToJob | Comunidad tech para desarrolladores y empresas",
+    "description": "Comunidad de desarrolladores y empresas tech en español. Comparte tu perfil, encuentra talento, participa en torneos y entra al sector con una oportunidad real.",
+    "keywords": [
+      "comunidad tech en español",
+      "desarrolladores",
+      "empleo tech",
+      "talentos tech",
+      "empresas tech",
+      "torneos de programación"
+    ],
+    "openGraphTitle": "TechToJob | Comunidad tech para desarrolladores y empresas",
+    "openGraphDescription": "Comunidad de desarrolladores y empresas tech en español. Comparte tu perfil, encuentra talento, participa en torneos y consigue una oportunidad real.",
+    "twitterTitle": "TechToJob | Comunidad tech para desarrolladores y empresas",
+    "twitterDescription": "Comunidad de desarrolladores y empresas tech en español. Comparte tu perfil, encuentra talento, y consigue una oportunidad real."
+  },
+  "header": {
+    "logoAlt": "Logo de TechToJob",
+    "backHome": "TechToJob, volver al inicio",
+    "navAria": "Navegación principal",
+    "mobileNavAria": "Navegación móvil",
+    "links": {
+      "how": "Cómo funciona",
+      "talent": "Talento",
+      "companies": "Empresas",
+      "tournaments": "Torneos",
+      "networking": "Networking",
+      "news": "Noticias"
+    },
+    "localeLabel": "Cambiar idioma",
+    "discord": "Entrar al Discord",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "badge": "Comunidad abierta",
+    "title": "Deja de mandar CVs al vacío",
+    "subtitle": "TechToJob es una comunidad de desarrolladores y empresas tech en español. No es un portal donde desapareces entre cientos de candidaturas: aquí participas, te conocen y las oportunidades llegan por lo que haces, no por lo que pones en un formulario.",
+    "cta": "Entrar al Discord"
+  },
+  "howItWorks": {
+    "eyebrow": "Cómo funciona",
+    "title": "Del primer mensaje a una oportunidad real",
+    "subtitle": "No hay formularios interminables ni algoritmos que te descarten sin leer. Participas, te haces visible y las oportunidades salen de ahí.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Entra y preséntate",
+        "text": "Únete al Discord, explora los canales por stack y cuéntales a quién le hablas. Sin formularios, sin colas."
+      },
+      {
+        "number": "02",
+        "title": "Participa",
+        "text": "Responde dudas, comparte lo que construyes, apúntate a un torneo. Cuanto más participas, más te conoce la comunidad."
+      },
+      {
+        "number": "03",
+        "title": "Aparecen oportunidades",
+        "text": "Empresas que ya saben cómo trabajas te contactan directamente. No rellenas un formulario y rezas: tú decides si encaja."
+      }
+    ]
+  },
+  "talent": {
+    "eyebrow": "Para desarrolladores",
+    "title": "Crea tu perfil y deja que te encuentren",
+    "subtitle": "Tu perfil lo lee una persona real, no un algoritmo que te descarta antes de que te conozca. No necesitas ser senior: junior, mid o en transición, aquí tienes sitio. Y no cuesta nada.",
+    "skills": [
+      { "label": "Stack", "detail": "Frontend, backend, mobile, data, DevOps…" },
+      { "label": "Nivel", "detail": "Junior, mid, senior o en transición" },
+      { "label": "Disponibilidad", "detail": "Full-time, part-time o proyectos" }
+    ],
+    "cta": "Publicar mi perfil",
+    "card": {
+      "name": "Marta · Frontend",
+      "stack": "React · TypeScript",
+      "level": "Senior",
+      "commitment": "Full-time",
+      "remote": "Remoto",
+      "quote": "\"Mi perfil hablaba por mí antes de la entrevista. Ya sabían qué sabía hacer, y la conversación fue directa.\""
+    }
+  },
+  "companies": {
+    "eyebrow": "Para empresas",
+    "title": "Publica tu vacante y conoce a la gente antes de contratar",
+    "subtitle": "Aquí ves a la gente trabajar antes de revisar su CV. Torneos, contribuciones y conversaciones te dan más contexto que cualquier carta de presentación.",
+    "benefits": [
+      {
+        "title": "Publica lo que buscas",
+        "text": "Un requerimiento claro llega a personas que ya se saben mover en la comunidad, no a bandejas de entrada saturadas."
+      },
+      {
+        "title": "Accede a perfiles reales",
+        "text": "Cada perfil muestra stack, nivel y disponibilidad con el respaldo de su participación en la comunidad."
+      },
+      {
+        "title": "Conócelos por lo que hacen",
+        "text": "Torneos, aportes y conversaciones te dicen más que un CV. Sabes con quién hablas antes de la primera entrevista."
+      }
+    ],
+    "card": {
+      "job": "Vacante · Backend Node",
+      "status": "Abierta",
+      "requirements": [
+        "Node.js y TypeScript",
+        "Entre 3 y 5 años de experiencia",
+        "Remoto o híbrido en España"
+      ],
+      "candidates": "Candidatos de la comunidad"
+    },
+    "cta": "Publicar una vacante"
+  },
+  "tournaments": {
+    "eyebrow": "Torneos",
+    "title": "Compite, aprende y dale cara a tu código",
+    "subtitle": "Retos reales, entregas con plazo y jurado con criterios públicos. Sirven para aprender, para tener algo que contar en una entrevista y para que la comunidad sepa quién eres. Esta web salió de uno.",
+    "cta": "Ver torneos abiertos",
+    "card": {
+      "badge": "En curso",
+      "label": "Torneo #2 · Landing de TechToJob",
+      "title": "Construye una landing de verdad",
+      "text": "Diseña, desarrolla y despliega la puerta de entrada de la comunidad. SEO, diseño y código real. Lo que construyas aquí se usa y se ve.",
+      "button": "Apuntarme al torneo"
+    },
+    "prizes": [
+      { "text": "Recompensas y reconocimiento" },
+      { "text": "Visibilidad ante la comunidad y empresas" },
+      { "text": "Algo real que enseñar en una entrevista" }
+    ]
+  },
+  "networking": {
+    "eyebrow": "Networking",
+    "title": "Enterarse a tiempo vale más que un CV perfecto",
+    "subtitle": "Canales por área con gente del sector que resuelve dudas en minutos y comparte ofertas que no están en ningún portal. Los buenos trabajos no se encuentran: se enteran.",
+    "channels": [
+      { "name": "Frontend", "detail": "React, Vue, CSS, accesibilidad" },
+      { "name": "Backend", "detail": "Node, Go, Python, arquitectura" },
+      { "name": "Data y ML", "detail": "Databases, analytics, modelos" },
+      { "name": "Carrera y salario", "detail": "Entrevistas, ofertas, negociación" }
+    ],
+    "cta": "Explorar los canales",
+    "card": {
+      "channel": "#carrera-y-salario",
+      "subtitle": "Gente del sector conectada",
+      "messages": [
+        {
+          "author": "Lucía",
+          "role": "Junior React",
+          "text": "Alguien del canal me avisó de una vacante que nunca se publicó en LinkedIn. Me la llevé."
+        },
+        {
+          "author": "Diego",
+          "role": "Ing. de software",
+          "text": "El otro día alguien preguntó por su stack y terminé recomendándolo para un proyecto. Conocer a la gente aquí abre puertas que un CV no."
+        }
+      ]
+    }
+  },
+  "news": {
+    "eyebrow": "Noticias",
+    "title": "Novedades de la comunidad",
+    "subtitle": "Torneos, cambios en el servidor y contenido para crecer en tu carrera.",
+    "readMore": "Leer la noticia completa",
+    "items": [
+      {
+        "title": "Torneo #2: construye la landing de TechToJob",
+        "summary": "Retos reales, un jurado con criterios públicos y el código que se usa. Así fue el torneo que creó esta web.",
+        "category": "Torneos",
+        "date": "7 de septiembre de 2026",
+        "dateTime": "2026-09-07",
+        "href": "#torneos"
+      },
+      {
+        "title": "Nuevos canales de networking por stack",
+        "summary": "Canales por área para que encuentres a tu gente, resuelvas dudas rápido y te enteres de oportunidades que no llegan a ningún portal.",
+        "category": "Comunidad",
+        "date": "2 de septiembre de 2026",
+        "dateTime": "2026-09-02",
+        "href": "#networking"
+      },
+      {
+        "title": "Cómo preparar una entrevista técnica de frontend",
+        "summary": "Lógica, proyecto propio y cómo contar lo que sabes sin quedarte corto. Una guía que sale de la experiencia de la comunidad.",
+        "category": "Carrera",
+        "date": "25 de agosto de 2026",
+        "dateTime": "2026-08-25",
+        "href": "#networking"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Lo mejor de la semana, en tu correo",
+    "subtitle": "Un correo los lunes con torneos abiertos, ofertas que alguien de la comunidad ha compartido y lo que no vas a encontrar en LinkedIn. Uno a la semana, nada de spam, date de baja cuando quieras.",
+    "label": "Tu correo electrónico",
+    "placeholder": "tu@correo.com",
+    "cta": "Quiero recibirlas",
+    "successTitle": "¡Listo!",
+    "successText": "Te has apuntado a la newsletter. Revisa tu bandeja para confirmar la suscripción.",
+    "error": "Escribe un correo válido, por ejemplo nombre@dominio.com."
+  },
+  "closing": {
+    "title": "Ya sabes qué es. La diferencia es entrar",
+    "subtitle": "Junior, senior o en transición: aquí se entra, se participa y de ahí salen las oportunidades. No hay formulario que rellenar, solo gente que te está esperando.",
+    "cta": "Entrar al Discord gratis"
+  },
+  "footer": {
+    "logoAlt": "Logo de TechToJob",
+    "backHome": "Volver al inicio de TechToJob",
+    "description": "Comunidad de desarrolladores y empresas tech en español. Perfiles reales, torneos y oportunidades que llegan por participar.",
+    "socialAria": "Redes sociales",
+    "blocks": [
+      {
+        "title": "Comunidad",
+        "links": [
+          { "text": "Cómo funciona", "href": "#como-funciona" },
+          { "text": "Ofrécete como talento", "href": "#talento" },
+          { "text": "Publica como empresa", "href": "#empresas" },
+          { "text": "Torneos abiertos", "href": "#torneos" }
+        ]
+      },
+      {
+        "title": "Recursos",
+        "links": [
+          { "text": "Noticias de la comunidad", "href": "#noticias" },
+          { "text": "Canales de networking", "href": "#networking" },
+          { "text": "Newsletter", "href": "#newsletter" }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          { "text": "Política de privacidad", "href": "/privacy" },
+          { "text": "Aviso legal", "href": "/legal" },
+          { "text": "Cookies", "href": "/cookies" }
+        ]
+      }
+    ],
+    "rights": "© {year} TechToJob. Hecho por la comunidad, para la comunidad.",
+    "social": [
+      { "name": "Discord", "href": "https://discord.gg/h9FFgKdkRd" },
+      { "name": "LinkedIn", "href": "https://www.linkedin.com/company/techtojob/" },
+      { "name": "X", "href": "https://x.com/techtojob" },
+      { "name": "Instagram", "href": "https://www.instagram.com/techtojob" }
+    ]
+  },
+  "legalMeta": {
+    "privacyTitle": "Política de privacidad",
+    "privacyDescription": "Cómo TechToJob trata los datos personales de los miembros de la comunidad, qué información se recoge y tus derechos.",
+    "legalTitle": "Aviso legal",
+    "legalDescription": "Información general y condiciones de uso del sitio web de TechToJob.",
+    "cookiesTitle": "Política de cookies",
+    "cookiesDescription": "Qué cookies usa TechToJob, para qué sirven y cómo gestionar tu consentimiento."
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "privacy": {
+      "title": "Política de privacidad",
+      "updated": "Última actualización: {date}",
+      "updatedDate": "7 de septiembre de 2026",
+      "sections": [
+        {
+          "title": "Quién gestiona los datos",
+          "text": "TechToJob es una comunidad gestionada por sus impulsoras y colaboradores. En esta ficha explicamos de forma clara cómo se tratan los datos personales de quien participa en la comunidad y usa este sitio."
+        },
+        {
+          "title": "Qué datos recogemos y para qué",
+          "items": [
+            {
+              "label": "Perfil en la comunidad:",
+              "text": " nombre, stack, nivel y disponibilidad que tú mismo publicas para que las empresas puedan encontrarte."
+            },
+            {
+              "label": "Correo en la newsletter:",
+              "text": " solo para enviarte las novedades semanales. Puedes darte de baja en cualquier momento."
+            },
+            {
+              "label": "Datos de uso del sitio:",
+              "text": " estadísticas anónimas (páginas vistas, dispositivo) tratadas de forma agregada."
+            }
+          ]
+        },
+        {
+          "title": "Tus derechos",
+          "text": "Puedes acceder, rectificar, suprimir y oponerte al tratamiento de tus datos, así como revocar tu consentimiento en cualquier momento. Escríbenos desde el canal de la comunidad y lo gestionamos lo antes posible."
+        }
+      ]
+    },
+    "legalPage": {
+      "title": "Aviso legal",
+      "sections": [
+        {
+          "title": "Identificación",
+          "text": "Este sitio web pertenece a la comunidad TechToJob, un proyecto colaborativo orientado a conectar desarrolladores y empresas tech en español."
+        },
+        {
+          "title": "Uso del contenido",
+          "text": "El contenido de esta web (textos, diseño, logotipos e ilustraciones) es de TechToJob o de sus autores. Puede compartirse citando la fuente, pero no está permitido su aprovechamiento comercial sin autorización previa."
+        },
+        {
+          "title": "Enlaces a discord externos",
+          "text": "Al entrar en el servidor de Discord desde este sitio pasas a un servicio de terceros, que tiene sus propias condiciones y política de privacidad. TechToJob no se hace responsable de esos espacios externos."
+        }
+      ]
+    },
+    "cookiesPage": {
+      "title": "Política de cookies",
+      "sections": [
+        {
+          "title": "Qué son las cookies",
+          "text": "Las cookies son pequeños archivos que se guardan en tu dispositivo al visitar una web. Ayudan a que el sitio funcione y a entender cómo se usa."
+        },
+        {
+          "title": "Cookies que usamos",
+          "paragraphs": [
+            { "label": "Técnicas:", "text": " imprescindibles para que la web funcione correctamente." },
+            { "label": "De análisis:", "text": " información agregada y anónima sobre el uso del sitio, siempre que las actives con tu consentimiento." }
+          ],
+          "note": "Este sitio no emplea cookies publicitarias."
+        },
+        {
+          "title": "Cómo gestionarlas",
+          "text": "Puedes aceptar, rechazar o configurar las cookies no imprescindibles desde el aviso que aparece al entrar, o bien desde la configuración de tu navegador, donde también puedes borrarlas en cualquier momento."
+        }
+      ]
+    }
+  }
+}

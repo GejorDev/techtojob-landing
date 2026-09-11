@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "title": "TechToJob | Tech community for developers and companies",
+    "description": "A community of developers and tech companies. Share your profile, find talent, join tournaments and break into the industry with a real opportunity.",
+    "keywords": [
+      "spanish tech community",
+      "developers",
+      "tech jobs",
+      "tech talent",
+      "tech companies",
+      "coding tournaments"
+    ],
+    "openGraphTitle": "TechToJob | Tech community for developers and companies",
+    "openGraphDescription": "A community of developers and tech companies. Share your profile, find talent, join tournaments and land a real opportunity.",
+    "twitterTitle": "TechToJob | Tech community for developers and companies",
+    "twitterDescription": "A community of developers and tech companies. Share your profile, find talent and land a real opportunity."
+  },
+  "header": {
+    "logoAlt": "TechToJob logo",
+    "backHome": "TechToJob, back to top",
+    "navAria": "Main navigation",
+    "mobileNavAria": "Mobile navigation",
+    "links": {
+      "how": "How it works",
+      "talent": "Talent",
+      "companies": "Companies",
+      "tournaments": "Tournaments",
+      "networking": "Networking",
+      "news": "News"
+    },
+    "localeLabel": "Change language",
+    "discord": "Join the Discord",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "badge": "Open community",
+    "title": "Stop sending CVs into the void",
+    "subtitle": "TechToJob is a community of developers and tech companies. It's not a portal where you disappear among hundreds of applications: here you take part, people get to know you and opportunities come from what you do, not from what you put in a form.",
+    "cta": "Join the Discord"
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "From your first message to a real opportunity",
+    "subtitle": "No endless forms, no algorithms silently rejecting you. You take part, you become visible and opportunities come out of it.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Join and introduce yourself",
+        "text": "Hop into the Discord, explore the channels by stack and tell people who you talk to. No forms, no queues."
+      },
+      {
+        "number": "02",
+        "title": "Take part",
+        "text": "Answer questions, share what you build, sign up for a tournament. The more you participate, the better the community knows you."
+      },
+      {
+        "number": "03",
+        "title": "Opportunities show up",
+        "text": "Companies that already know how you work reach out directly. You don't fill in a form and pray: you decide whether it fits."
+      }
+    ]
+  },
+  "talent": {
+    "eyebrow": "For developers",
+    "title": "Create your profile and let them find you",
+    "subtitle": "A real person reads your profile, not an algorithm that rules you out before knowing you. You don't need to be senior: junior, mid or transitioning, there's room for you here. And it's free.",
+    "skills": [
+      { "label": "Stack", "detail": "Frontend, backend, mobile, data, DevOps…" },
+      { "label": "Level", "detail": "Junior, mid, senior or transitioning" },
+      { "label": "Availability", "detail": "Full-time, part-time or projects" }
+    ],
+    "cta": "Publish my profile",
+    "card": {
+      "name": "Marta · Frontend",
+      "stack": "React · TypeScript",
+      "level": "Senior",
+      "commitment": "Full-time",
+      "remote": "Remote",
+      "quote": "\"My profile spoke for me before the interview. They already knew what I could do, and the conversation went straight to the point.\""
+    }
+  },
+  "companies": {
+    "eyebrow": "For companies",
+    "title": "Publish your role and meet people before hiring",
+    "subtitle": "Here you see people working before you look at their CV. Tournaments, contributions and conversations give you more context than any cover letter.",
+    "benefits": [
+      {
+        "title": "Publish what you need",
+        "text": "A clear requirement reaches people who already know how to move in the community, not saturated inboxes."
+      },
+      {
+        "title": "Access real profiles",
+        "text": "Every profile shows stack, level and availability backed by their participation in the community."
+      },
+      {
+        "title": "Get to know them by what they do",
+        "text": "Tournaments, contributions and conversations tell you more than a CV. You know who you're talking to before the first interview."
+      }
+    ],
+    "card": {
+      "job": "Role · Backend Node",
+      "status": "Open",
+      "requirements": [
+        "Node.js and TypeScript",
+        "3 to 5 years of experience",
+        "Remote or hybrid in Spain"
+      ],
+      "candidates": "Community candidates"
+    },
+    "cta": "Publish a role"
+  },
+  "tournaments": {
+    "eyebrow": "Tournaments",
+    "title": "Compete, learn and put a face to your code",
+    "subtitle": "Real challenges, timed deliveries and judges with public criteria. They help you learn, give you something to talk about in an interview and let the community know who you are. This website came out of one.",
+    "cta": "See open tournaments",
+    "card": {
+      "badge": "In progress",
+      "label": "Tournament #2 · TechToJob landing",
+      "title": "Build a real landing page",
+      "text": "Design, build and deploy the community's front door. SEO, design and real code. What you build here gets used and seen.",
+      "button": "Sign me up for the tournament"
+    },
+    "prizes": [
+      { "text": "Rewards and recognition" },
+      { "text": "Visibility among the community and companies" },
+      { "text": "Something real to show at an interview" }
+    ]
+  },
+  "networking": {
+    "eyebrow": "Networking",
+    "title": "Finding out early beats a perfect CV",
+    "subtitle": "Channels by area with industry people who answer questions in minutes and share openings that never hit a job board. Good jobs aren't found: you hear about them.",
+    "channels": [
+      { "name": "Frontend", "detail": "React, Vue, CSS, accessibility" },
+      { "name": "Backend", "detail": "Node, Go, Python, architecture" },
+      { "name": "Data & ML", "detail": "Databases, analytics, models" },
+      { "name": "Career & salary", "detail": "Interviews, offers, negotiation" }
+    ],
+    "cta": "Explore the channels",
+    "card": {
+      "channel": "#career-and-salary",
+      "subtitle": "People from the industry, connected",
+      "messages": [
+        {
+          "author": "Lucía",
+          "role": "Junior React",
+          "text": "Someone in the channel tipped me off about a role that was never posted on LinkedIn. I got it."
+        },
+        {
+          "author": "Diego",
+          "role": "Software engineer",
+          "text": "The other day someone asked about their stack and I ended up recommending them for a project. Knowing people here opens doors a CV can't."
+        }
+      ]
+    }
+  },
+  "news": {
+    "eyebrow": "News",
+    "title": "Community updates",
+    "subtitle": "Tournaments, server changes and content to grow your career.",
+    "readMore": "Read the full story",
+    "items": [
+      {
+        "title": "Tournament #2: build the TechToJob landing",
+        "summary": "Real challenges, a jury with public criteria and code that gets used. That's how this website came to be.",
+        "category": "Tournaments",
+        "date": "September 7, 2026",
+        "dateTime": "2026-09-07",
+        "href": "#torneos"
+      },
+      {
+        "title": "New networking channels by stack",
+        "summary": "Channels by area so you find your people, get quick answers and hear about opportunities that never reach a job board.",
+        "category": "Community",
+        "date": "September 2, 2026",
+        "dateTime": "2026-09-02",
+        "href": "#networking"
+      },
+      {
+        "title": "How to prepare for a frontend technical interview",
+        "summary": "Logic, your own project and how to tell what you know without underselling yourself. A guide born from the community's experience.",
+        "category": "Career",
+        "date": "August 25, 2026",
+        "dateTime": "2026-08-25",
+        "href": "#networking"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "The best of the week, in your inbox",
+    "subtitle": "One email every Monday with open tournaments, openings shared by the community and things you won't find on LinkedIn. Once a week, no spam, unsubscribe whenever you want.",
+    "label": "Your email address",
+    "placeholder": "you@email.com",
+    "cta": "I want them",
+    "successTitle": "Done!",
+    "successText": "You're subscribed to the newsletter. Check your inbox to confirm.",
+    "error": "Enter a valid email, e.g. name@domain.com."
+  },
+  "closing": {
+    "title": "You know what it is. The difference is joining",
+    "subtitle": "Junior, senior or transitioning: you come in, you take part and the opportunities come out of it. There's no form to fill in, just people waiting for you.",
+    "cta": "Join the Discord for free"
+  },
+  "footer": {
+    "logoAlt": "TechToJob logo",
+    "backHome": "Back to the top of TechToJob",
+    "description": "A community of developers and tech companies. Real profiles, tournaments and opportunities that come from taking part.",
+    "socialAria": "Social media",
+    "blocks": [
+      {
+        "title": "Community",
+        "links": [
+          { "text": "How it works", "href": "#como-funciona" },
+          { "text": "Offer yourself as talent", "href": "#talento" },
+          { "text": "Publish as a company", "href": "#empresas" },
+          { "text": "Open tournaments", "href": "#torneos" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          { "text": "Community news", "href": "#noticias" },
+          { "text": "Networking channels", "href": "#networking" },
+          { "text": "Newsletter", "href": "#newsletter" }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          { "text": "Privacy policy", "href": "/privacy" },
+          { "text": "Legal notice", "href": "/legal" },
+          { "text": "Cookies", "href": "/cookies" }
+        ]
+      }
+    ],
+    "rights": "© {year} TechToJob. Built by the community, for the community.",
+    "social": [
+      { "name": "Discord", "href": "https://discord.gg/h9FFgKdkRd" },
+      { "name": "LinkedIn", "href": "https://www.linkedin.com/company/techtojob/" },
+      { "name": "X", "href": "https://x.com/techtojob" },
+      { "name": "Instagram", "href": "https://www.instagram.com/techtojob" }
+    ]
+  },
+  "legalMeta": {
+    "privacyTitle": "Privacy policy",
+    "privacyDescription": "How TechToJob handles community members' personal data, what information is collected and your rights.",
+    "legalTitle": "Legal notice",
+    "legalDescription": "General information and terms of use for the TechToJob website.",
+    "cookiesTitle": "Cookie policy",
+    "cookiesDescription": "Which cookies TechToJob uses, what they're for and how to manage your consent."
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "privacy": {
+      "title": "Privacy policy",
+      "updated": "Last updated: {date}",
+      "updatedDate": "September 7, 2026",
+      "sections": [
+        {
+          "title": "Who manages the data",
+          "text": "TechToJob is a community run by its founders and collaborators. This page explains clearly how the personal data of anyone taking part in the community or using this site is handled."
+        },
+        {
+          "title": "What data we collect and why",
+          "items": [
+            {
+              "label": "Community profile:",
+              "text": " name, stack, level and availability that you publish yourself so companies can find you."
+            },
+            {
+              "label": "Newsletter email:",
+              "text": " only to send you the weekly updates. You can unsubscribe at any time."
+            },
+            {
+              "label": "Site usage data:",
+              "text": " anonymous statistics (page views, device) processed in aggregate form."
+            }
+          ]
+        },
+        {
+          "title": "Your rights",
+          "text": "You can access, rectify, delete and object to the processing of your data, as well as withdraw your consent at any time. Write to us from the community channel and we'll handle it as soon as possible."
+        }
+      ]
+    },
+    "legalPage": {
+      "title": "Legal notice",
+      "sections": [
+        {
+          "title": "Identification",
+          "text": "This website belongs to the TechToJob community, a collaborative project that connects developers and tech companies."
+        },
+        {
+          "title": "Use of content",
+          "text": "The content of this site (texts, design, logos and illustrations) belongs to TechToJob or its authors. It may be shared with attribution, but commercial use without prior authorization is not permitted."
+        },
+        {
+          "title": "External Discord links",
+          "text": "When you join the Discord server from this site you move to a third-party service with its own terms and privacy policy. TechToJob is not responsible for those external spaces."
+        }
+      ]
+    },
+    "cookiesPage": {
+      "title": "Cookie policy",
+      "sections": [
+        {
+          "title": "What cookies are",
+          "text": "Cookies are small files stored on your device when you visit a website. They help the site work and help us understand how it's used."
+        },
+        {
+          "title": "Cookies we use",
+          "paragraphs": [
+            { "label": "Technical:", "text": " essential for the website to work properly." },
+            { "label": "Analytics:", "text": " aggregated, anonymous information about site usage, only when you opt in." }
+          ],
+          "note": "This site does not use advertising cookies."
+        },
+        {
+          "title": "How to manage them",
+          "text": "You can accept, reject or configure non-essential cookies from the banner shown on entry, or from your browser settings, where you can also delete them at any time."
+        }
+      ]
+    }
+  }
+}

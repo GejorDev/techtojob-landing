@@ -3,18 +3,29 @@
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 
 const navLinks = [
-  { href: "#como-funciona", label: "Cómo funciona" },
-  { href: "#talento", label: "Talento" },
-  { href: "#empresas", label: "Empresas" },
-  { href: "#torneos", label: "Torneos" },
-  { href: "#networking", label: "Networking" },
-  { href: "#noticias", label: "Noticias" },
-];
+  { href: "#como-funciona", key: "links.how" },
+  { href: "#talento", key: "links.talent" },
+  { href: "#empresas", key: "links.companies" },
+  { href: "#torneos", key: "links.tournaments" },
+  { href: "#networking", key: "links.networking" },
+  { href: "#noticias", key: "links.news" },
+] as const;
 
 export default function Header() {
+  const t = useTranslations("header");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
   const [abierto, setAbierto] = useState(false);
+
+  function switchLocale(nextLocale: (typeof routing.locales)[number]) {
+    router.replace(pathname, { locale: nextLocale });
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
@@ -22,11 +33,11 @@ export default function Header() {
         <a
           href="#inicio"
           className="flex h-9 w-auto items-center"
-          aria-label="TechToJob, volver al inicio"
+          aria-label={t("backHome")}
         >
           <Image
             src="/logo-positive.svg"
-            alt="Logo de TechToJob"
+            alt={t("logoAlt")}
             width={180}
             height={30}
             priority
@@ -36,7 +47,7 @@ export default function Header() {
 
         <nav
           className="hidden items-center gap-7 lg:flex"
-          aria-label="Navegación principal"
+          aria-label={t("navAria")}
         >
           {navLinks.map((link) => (
             <a
@@ -44,19 +55,40 @@ export default function Header() {
               href={link.href}
               className="text-sm font-medium text-ink-muted transition-colors hover:text-ink"
             >
-              {link.label}
+              {t(link.key)}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
+          <div
+            className="flex items-center gap-1 text-sm font-semibold"
+            role="group"
+            aria-label={t("localeLabel")}
+          >
+            {routing.locales.map((l) => (
+              <button
+                key={l}
+                type="button"
+                onClick={() => switchLocale(l)}
+                aria-pressed={locale === l}
+                className={`rounded-full px-2.5 py-1 transition-colors ${
+                  locale === l
+                    ? "bg-ink text-white"
+                    : "text-ink-muted hover:text-ink"
+                }`}
+              >
+                {l === "es" ? "ES" : "EN"}
+              </button>
+            ))}
+          </div>
           <a
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 items-center rounded-full bg-ink px-5 text-sm font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98] max-lg:hidden"
           >
-            Entrar al Discord
+            {t("discord")}
           </a>
           <button
             type="button"
@@ -64,7 +96,7 @@ export default function Header() {
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink lg:hidden"
             aria-expanded={abierto}
             aria-controls="menu-movil"
-            aria-label={abierto ? "Cerrar menú" : "Abrir menú"}
+            aria-label={abierto ? t("closeMenu") : t("openMenu")}
           >
             {abierto ? (
               <X className="h-5 w-5" aria-hidden="true" />
@@ -79,7 +111,7 @@ export default function Header() {
         <nav
           id="menu-movil"
           className="border-t border-line bg-paper px-5 pb-6 pt-3 lg:hidden"
-          aria-label="Navegación móvil"
+          aria-label={t("mobileNavAria")}
         >
           <ul className="flex flex-col">
             {navLinks.map((link) => (
@@ -89,7 +121,7 @@ export default function Header() {
                   onClick={() => setAbierto(false)}
                   className="block border-b border-line py-3 font-medium text-ink-muted transition-colors hover:text-ink"
                 >
-                  {link.label}
+                  {t(link.key)}
                 </a>
               </li>
             ))}
@@ -100,7 +132,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="mt-5 inline-flex h-11 w-full items-center justify-center rounded-full bg-ink font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98]"
           >
-            Entrar al Discord
+            {t("discord")}
           </a>
         </nav>
       )}

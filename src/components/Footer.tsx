@@ -1,50 +1,31 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 
-const bloques = [
-  {
-    titulo: "Comunidad",
-    enlaces: [
-      { texto: "Cómo funciona", href: "#como-funciona" },
-      { texto: "Ofrécete como talento", href: "#talento" },
-      { texto: "Publica como empresa", href: "#empresas" },
-      { texto: "Torneos abiertos", href: "#torneos" },
-    ],
-  },
-  {
-    titulo: "Recursos",
-    enlaces: [
-      { texto: "Noticias de la comunidad", href: "#noticias" },
-      { texto: "Canales de networking", href: "#networking" },
-      { texto: "Newsletter", href: "#newsletter" },
-    ],
-  },
-  {
-    titulo: "Legal",
-    enlaces: [
-      { texto: "Política de privacidad", href: "/privacy" },
-      { texto: "Aviso legal", href: "/legal" },
-      { texto: "Cookies", href: "/cookies" },
-    ],
-  },
-];
+type FooterLink = { text: string; href: string };
 
-const redes = [
-  { nombre: "Discord", href: "https://discord.gg/h9FFgKdkRd" },
-  { nombre: "LinkedIn", href: "https://www.linkedin.com/company/techtojob/" },
-  { nombre: "X", href: "https://x.com/techtojob" },
-  { nombre: "Instagram", href: "https://www.instagram.com/techtojob" },
-];
+export default async function Footer() {
+  const t = await getTranslations("footer");
 
-export default function Footer() {
+  const bloques = t.raw("blocks") as {
+    title: string;
+    links: FooterLink[];
+  }[];
+  const redes = t.raw("social") as { name: string; href: string }[];
+
   return (
     <footer className="border-t border-line bg-mist">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <a href="#inicio" className="inline-block transition-opacity hover:opacity-80" aria-label="Volver al inicio de TechToJob">
+            <a
+              href="#inicio"
+              className="inline-block transition-opacity hover:opacity-80"
+              aria-label={t("backHome")}
+            >
               <Image
                 src="/logo-positive.svg"
-                alt="Logo de TechToJob"
+                alt={t("logoAlt")}
                 width={180}
                 height={30}
                 loading="lazy"
@@ -52,25 +33,33 @@ export default function Footer() {
               />
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
-              Comunidad de desarrolladores y empresas tech en español. Perfiles
-              reales, torneos y oportunidades que llegan por participar.
+              {t("description")}
             </p>
           </div>
 
           {bloques.map((bloque) => (
-            <nav key={bloque.titulo} aria-label={bloque.titulo}>
+            <nav key={bloque.title} aria-label={bloque.title}>
               <h2 className="text-sm font-semibold uppercase tracking-wider text-ink">
-                {bloque.titulo}
+                {bloque.title}
               </h2>
               <ul className="mt-4 space-y-2.5">
-                {bloque.enlaces.map((enlace) => (
-                  <li key={enlace.texto}>
-                    <a
-                      href={enlace.href}
-                      className="text-sm text-ink-muted transition-colors hover:text-ink"
-                    >
-                      {enlace.texto}
-                    </a>
+                {bloque.links.map((enlace) => (
+                  <li key={enlace.text}>
+                    {enlace.href.startsWith("#") ? (
+                      <a
+                        href={enlace.href}
+                        className="text-sm text-ink-muted transition-colors hover:text-ink"
+                      >
+                        {enlace.text}
+                      </a>
+                    ) : (
+                      <Link
+                        href={enlace.href}
+                        className="text-sm text-ink-muted transition-colors hover:text-ink"
+                      >
+                        {enlace.text}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -80,19 +69,19 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-5 border-t border-line pt-7 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-ink-muted">
-            © {new Date().getFullYear()} TechToJob. Hecho por la comunidad, para la comunidad.
+            {t("rights", { year: new Date().getFullYear() })}
           </p>
-          <nav aria-label="Redes sociales">
+          <nav aria-label={t("socialAria")}>
             <ul className="flex gap-4">
               {redes.map((red) => (
-                <li key={red.nombre}>
+                <li key={red.name}>
                   <a
                     href={red.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-ink transition-colors hover:text-teal-dark"
                   >
-                    {red.nombre}
+                    {red.name}
                   </a>
                 </li>
               ))}
