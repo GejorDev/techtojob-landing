@@ -33,7 +33,7 @@ export default async function Tournaments() {
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-12 w-fit items-center rounded-full border border-ink px-7 text-base font-semibold text-ink transition hover:bg-ink hover:text-white active:scale-[0.98]"
+            className="inline-flex h-12 w-fit items-center rounded-full border border-transparent bg-teal px-7 text-base font-semibold text-ink transition hover:bg-teal-dark active:scale-[0.98]"
           >
             {t("cta")}
           </a>
