@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { Mail } from "lucide-react";
 
 export default function Newsletter() {
   const t = useTranslations("newsletter");
@@ -54,23 +55,31 @@ export default function Newsletter() {
               <label htmlFor="email" className="sr-only">
                 {t("label")}
               </label>
-              <input
-                id="email"
-                type="email"
-                required
-                value={email}
-                onChange={(event) => {
-                  setEmail(event.target.value);
-                  if (status === "error") setStatus("idle");
-                }}
-                placeholder={t("placeholder")}
-                className="h-13 max-sm:h-22 flex-1 rounded-full border-2 border-ink/20 bg-paper px-5 text-base text-ink placeholder:text-ink-muted focus:border-ink focus:outline-none"
-                aria-describedby={status === "error" ? "email-error" : undefined}
-                aria-invalid={status === "error"}
-              />
+              <div className="relative flex-1">
+                <Mail
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-muted"
+                />
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(event) => {
+                    setEmail(event.target.value);
+                    if (status === "error") setStatus("idle");
+                  }}
+                  placeholder={t("placeholder")}
+                  className="h-12 w-full rounded-full border-2 border-ink/20 bg-paper pl-11 pr-6 text-lg text-ink placeholder:text-ink-muted focus:border-ink focus:outline-none"
+                  aria-describedby={
+                    status === "error" ? "email-error" : undefined
+                  }
+                  aria-invalid={status === "error"}
+                />
+              </div>
               <button
                 type="submit"
-                className="inline-flex h-13 items-center justify-center rounded-full bg-ink px-7 font-semibold text-white transition-colors hover:bg-ink-soft"
+                className="inline-flex h-12 w-full items-center justify-center rounded-full bg-ink px-7 font-semibold text-white transition-colors hover:bg-ink-soft sm:w-auto"
               >
                 {t("cta")}
               </button>
