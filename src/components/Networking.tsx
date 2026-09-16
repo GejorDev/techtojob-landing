@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import Eyebrow, { SECTION_TITLE_CLASS } from "./Eyebrow";
+import { DISCORD_URL } from "./DiscordCtaLink";
 
 const icons = [MonitorSmartphone, Server, Database, TrendingUp];
 
@@ -62,7 +63,7 @@ export default async function Networking() {
             })}
           </ul>
           <a
-            href="https://discord.gg/h9FFgKdkRd"
+            href={DISCORD_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-7 text-base font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98]"

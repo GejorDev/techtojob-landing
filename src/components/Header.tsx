@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { DISCORD_URL } from "./DiscordCtaLink";
 
 const navLinks = [
   { href: "#how-it-works", key: "links.how" },
@@ -83,7 +84,7 @@ export default function Header() {
             ))}
           </div>
           <a
-            href="https://discord.gg/h9FFgKdkRd"
+            href={DISCORD_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 items-center rounded-full bg-teal px-5 text-sm font-semibold text-ink transition hover:bg-teal-dark active:scale-[0.98] max-lg:hidden"
@@ -127,7 +128,7 @@ export default function Header() {
             ))}
           </ul>
           <a
-            href="https://discord.gg/h9FFgKdkRd"
+            href={DISCORD_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-5 inline-flex h-11 w-full items-center justify-center rounded-full bg-teal font-semibold text-ink transition hover:bg-teal-dark active:scale-[0.98]"

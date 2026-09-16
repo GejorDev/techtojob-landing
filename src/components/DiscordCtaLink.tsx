@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-const DISCORD_URL = "https://discord.gg/h9FFgKdkRd";
+export const DISCORD_URL = "https://discord.gg/h9FFgKdkRd";
 
 export default function DiscordCtaLink({
   children,

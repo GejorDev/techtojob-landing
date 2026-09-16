@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { DISCORD_URL } from "@/components/DiscordCtaLink";
 import "../globals.css";
 
 const sora = Sora({
@@ -75,7 +76,7 @@ const jsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/logo-positive.svg`,
   sameAs: [
-    "https://discord.gg/h9FFgKdkRd",
+    DISCORD_URL,
     "https://www.linkedin.com/company/techtojob/",
     "https://x.com/techtojob",
     "https://www.instagram.com/techtojob",
