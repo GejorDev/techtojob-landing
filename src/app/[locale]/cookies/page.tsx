@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
+import Eyebrow, { SECTION_TITLE_CLASS } from "@/components/Eyebrow";
 
 export async function generateMetadata({
   params,
@@ -41,10 +42,8 @@ export default async function CookiesPage({
 
   return (
     <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 lg:py-20">
-      <p className="text-sm font-semibold uppercase tracking-widest text-ink-muted">
-        {legal("eyebrow")}
-      </p>
-      <h1 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      <Eyebrow>{legal("eyebrow")}</Eyebrow>
+      <h1 className={SECTION_TITLE_CLASS}>
         {t("title")}
       </h1>
 
