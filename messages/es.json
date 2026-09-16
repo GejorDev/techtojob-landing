@@ -15,6 +15,10 @@
     "twitterTitle": "TechToJob | Comunidad tech para desarrolladores y empresas",
     "twitterDescription": "Comunidad de desarrolladores y empresas tech en español. Comparte tu perfil, encuentra talento, y consigue una oportunidad real."
   },
+  "ogImage": {
+    "heading": "Comunidad tech para desarrolladores y empresas",
+    "tagline": "Comparte tu perfil · Encuentra talento · Consigue una oportunidad real"
+  },
   "header": {
     "logoAlt": "Logo de TechToJob",
     "backHome": "TechToJob, volver al inicio",
@@ -37,7 +41,10 @@
     "badge": "Comunidad abierta",
     "title": "Deja de mandar CVs al vacío",
     "subtitle": "TechToJob es una comunidad de desarrolladores y empresas tech en español. No es un portal donde desapareces entre cientos de candidaturas: aquí participas, te conocen y las oportunidades llegan por lo que haces, no por lo que pones en un formulario.",
-    "cta": "Entrar al Discord"
+    "cta": "Entrar al Discord",
+    "terminalPrompt": "techtojob — zsh",
+    "terminalStatus": "# dev en transición",
+    "terminalAction": "./participar"
   },
   "howItWorks": {
     "eyebrow": "Cómo funciona",
@@ -168,7 +175,7 @@
         "category": "Torneos",
         "date": "7 de septiembre de 2026",
         "dateTime": "2026-09-07",
-        "href": "#torneos"
+        "href": "#tournaments"
       },
       {
         "title": "Nuevos canales de networking por stack",
@@ -201,7 +208,21 @@
   "closing": {
     "title": "Ya sabes qué es. La diferencia es entrar",
     "subtitle": "Junior, senior o en transición: aquí se entra, se participa y de ahí salen las oportunidades. No hay formulario que rellenar, solo gente que te está esperando.",
-    "cta": "Entrar al Discord gratis"
+    "cta": "Entrar al Discord"
+  },
+  "ticker": {
+    "channels": [
+      "frontend",
+      "backend",
+      "data-ml",
+      "devops",
+      "mobile",
+      "carrera-y-salario",
+      "entrevistas",
+      "ofertas",
+      "proyectos",
+      "general"
+    ]
   },
   "footer": {
     "logoAlt": "Logo de TechToJob",
@@ -212,16 +233,16 @@
       {
         "title": "Comunidad",
         "links": [
-          { "text": "Cómo funciona", "href": "#como-funciona" },
-          { "text": "Ofrécete como talento", "href": "#talento" },
-          { "text": "Publica como empresa", "href": "#empresas" },
-          { "text": "Torneos abiertos", "href": "#torneos" }
+          { "text": "Cómo funciona", "href": "#how-it-works" },
+          { "text": "Ofrécete como talento", "href": "#talent" },
+          { "text": "Publica como empresa", "href": "#companies" },
+          { "text": "Torneos abiertos", "href": "#tournaments" }
         ]
       },
       {
         "title": "Recursos",
         "links": [
-          { "text": "Noticias de la comunidad", "href": "#noticias" },
+          { "text": "Noticias de la comunidad", "href": "#news" },
           { "text": "Canales de networking", "href": "#networking" },
           { "text": "Newsletter", "href": "#newsletter" }
         ]

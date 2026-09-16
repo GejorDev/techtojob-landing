@@ -1,6 +1,8 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { ImageResponse } from "next/og";
+import { getTranslations } from "next-intl/server";
+import type { Locale } from "@/i18n/routing";
 
 export const size = {
   width: 1200,
@@ -9,17 +11,15 @@ export const size = {
 
 export const contentType = "image/png";
 
-export const alt =
-  "TechToJob — Comunidad de desarrolladores y empresas tech en español";
+export const alt = "TechToJob — Developer and tech community";
 
-// Sora autoalojada como TTF (satori no acepta woff2). Pesos que usa la imagen.
+// Self-hosted Sora as TTF (satori doesn't accept woff2). Weights used in the image.
 const fontData = {
   400: readFileSync(path.join(process.cwd(), "src/fonts/Sora-400.ttf")),
   700: readFileSync(path.join(process.cwd(), "src/fonts/Sora-700.ttf")),
-  800: readFileSync(path.join(process.cwd(), "src/fonts/Sora-800.ttf")),
 };
 
-// Símbolo oficial de la marca (versión negativa, teal sobre fondo oscuro).
+// Official brand mark (negative version, teal on dark background).
 const symbolSvg = readFileSync(
   path.join(process.cwd(), "public/logo-negative.svg"),
   "utf8"
@@ -29,10 +29,20 @@ const symbolFill =
   symbolSvg.match(/fill:\s*(#[0-9a-fA-F]{3,6})/)?.[1] ?? "#84c0bf";
 
 if (!symbolD) {
-  throw new Error("No se pudo extraer el path del símbolo de TechToJob");
+  throw new Error("Could not extract the TechToJob symbol path");
 }
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale: locale as Locale,
+    namespace: "ogImage",
+  });
+
   return new ImageResponse(
     (
       <div
@@ -81,12 +91,12 @@ export default function OpenGraphImage() {
             maxWidth: 900,
           }}
         >
-          Comunidad tech para desarrolladores y empresas
+          {t("heading")}
         </div>
         <div
           style={{ fontSize: 32, fontWeight: 400, color: "#84c0bf", marginTop: 28 }}
         >
-          Comparte tu perfil · Encuentra talento · Consigue una oportunidad real
+          {t("tagline")}
         </div>
       </div>
     ),
@@ -95,7 +105,6 @@ export default function OpenGraphImage() {
       fonts: [
         { name: "Sora", data: fontData[400], weight: 400, style: "normal" },
         { name: "Sora", data: fontData[700], weight: 700, style: "normal" },
-        { name: "Sora", data: fontData[800], weight: 800, style: "normal" },
       ],
     }
   );

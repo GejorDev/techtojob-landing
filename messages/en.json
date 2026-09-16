@@ -15,6 +15,10 @@
     "twitterTitle": "TechToJob | Tech community for developers and companies",
     "twitterDescription": "A community of developers and tech companies. Share your profile, find talent and land a real opportunity."
   },
+  "ogImage": {
+    "heading": "A tech community for developers and companies",
+    "tagline": "Share your profile · Find talent · Land a real opportunity"
+  },
   "header": {
     "logoAlt": "TechToJob logo",
     "backHome": "TechToJob, back to top",
@@ -37,7 +41,10 @@
     "badge": "Open community",
     "title": "Stop sending CVs into the void",
     "subtitle": "TechToJob is a community of developers and tech companies. It's not a portal where you disappear among hundreds of applications: here you take part, people get to know you and opportunities come from what you do, not from what you put in a form.",
-    "cta": "Join the Discord"
+    "cta": "Join the Discord",
+    "terminalPrompt": "techtojob — zsh",
+    "terminalStatus": "# dev in transition",
+    "terminalAction": "./participate"
   },
   "howItWorks": {
     "eyebrow": "How it works",
@@ -168,7 +175,7 @@
         "category": "Tournaments",
         "date": "September 7, 2026",
         "dateTime": "2026-09-07",
-        "href": "#torneos"
+        "href": "#tournaments"
       },
       {
         "title": "New networking channels by stack",
@@ -201,7 +208,21 @@
   "closing": {
     "title": "You know what it is. The difference is joining",
     "subtitle": "Junior, senior or transitioning: you come in, you take part and the opportunities come out of it. There's no form to fill in, just people waiting for you.",
-    "cta": "Join the Discord for free"
+    "cta": "Join the Discord"
+  },
+  "ticker": {
+    "channels": [
+      "frontend",
+      "backend",
+      "data-ml",
+      "devops",
+      "mobile",
+      "career-and-salary",
+      "interviews",
+      "job-offers",
+      "side-projects",
+      "general"
+    ]
   },
   "footer": {
     "logoAlt": "TechToJob logo",
@@ -212,16 +233,16 @@
       {
         "title": "Community",
         "links": [
-          { "text": "How it works", "href": "#como-funciona" },
-          { "text": "Offer yourself as talent", "href": "#talento" },
-          { "text": "Publish as a company", "href": "#empresas" },
-          { "text": "Open tournaments", "href": "#torneos" }
+          { "text": "How it works", "href": "#how-it-works" },
+          { "text": "Offer yourself as talent", "href": "#talent" },
+          { "text": "Publish as a company", "href": "#companies" },
+          { "text": "Open tournaments", "href": "#tournaments" }
         ]
       },
       {
         "title": "Resources",
         "links": [
-          { "text": "Community news", "href": "#noticias" },
+          { "text": "Community news", "href": "#news" },
           { "text": "Networking channels", "href": "#networking" },
           { "text": "Newsletter", "href": "#newsletter" }
         ]
