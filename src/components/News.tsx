@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import Eyebrow, { SECTION_TITLE_CLASS } from "./Eyebrow";
 
 type NewsItem = {
@@ -52,13 +53,13 @@ export default async function News() {
               <p className="mt-3 flex-1 leading-relaxed text-ink-muted">
                 {item.summary}
               </p>
-              <a
-                href={item.href}
+              <Link
+                href={{ pathname: "/", hash: item.href }}
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink transition-colors hover:text-teal-dark"
               >
                 {t("readMore")}
                 <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </article>
           ))}
         </div>

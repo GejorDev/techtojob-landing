@@ -18,8 +18,8 @@ export default async function Footer() {
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <a
-              href="#home"
+            <Link
+              href="/"
               className="inline-block transition-opacity hover:opacity-80"
               aria-label={t("backHome")}
             >
@@ -31,7 +31,7 @@ export default async function Footer() {
                 loading="lazy"
                 className="h-7 w-auto"
               />
-            </a>
+            </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
               {t("description")}
             </p>
@@ -45,21 +45,16 @@ export default async function Footer() {
               <ul className="mt-4 space-y-2.5">
                 {block.links.map((link) => (
                   <li key={link.text}>
-                    {link.href.startsWith("#") ? (
-                      <a
-                        href={link.href}
-                        className="text-sm text-ink-muted transition-colors hover:text-ink"
-                      >
-                        {link.text}
-                      </a>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        className="text-sm text-ink-muted transition-colors hover:text-ink"
-                      >
-                        {link.text}
-                      </Link>
-                    )}
+                    <Link
+                      href={
+                        link.href.startsWith("#")
+                          ? { pathname: "/", hash: link.href }
+                          : link.href
+                      }
+                      className="text-sm text-ink-muted transition-colors hover:text-ink"
+                    >
+                      {link.text}
+                    </Link>
                   </li>
                 ))}
               </ul>

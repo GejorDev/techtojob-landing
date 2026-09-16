@@ -1,5 +1,6 @@
 import { Trophy, Users, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import DiscordCtaLink from "./DiscordCtaLink";
 import Eyebrow, { SECTION_TITLE_CLASS } from "./Eyebrow";
 
@@ -60,12 +61,12 @@ export default async function Tournaments() {
               <p className="mt-3 leading-relaxed text-zinc-300">
                 {t("card.text")}
               </p>
-              <a
-                href="#news"
+              <Link
+                href={{ pathname: "/", hash: "#news" }}
                 className="mt-6 inline-flex h-11 items-center rounded-full bg-teal px-6 text-sm font-semibold text-ink transition hover:bg-teal-dark active:scale-[0.98]"
               >
                 {t("card.button")}
-              </a>
+              </Link>
             </div>
             <ul className="space-y-3">
               {prizes.map((prize, i) => {

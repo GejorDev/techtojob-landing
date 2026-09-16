@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
 const navLinks = [
@@ -30,11 +30,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <a
-          href="#home"
-          className="flex h-9 w-auto items-center"
-          aria-label={t("backHome")}
-        >
+          <Link
+            href="/"
+            className="flex h-9 w-auto items-center"
+            aria-label={t("backHome")}
+          >
           <Image
             src="/logo-positive.svg"
             alt={t("logoAlt")}
@@ -43,20 +43,20 @@ export default function Header() {
             priority
             className="h-7 w-auto"
           />
-        </a>
+        </Link>
 
         <nav
           className="hidden items-center gap-7 lg:flex"
           aria-label={t("navAria")}
         >
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
+              href={{ pathname: "/", hash: link.href }}
               className="text-sm font-medium text-ink-muted transition-colors hover:text-ink"
             >
               {t(link.key)}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -116,13 +116,13 @@ export default function Header() {
           <ul className="flex flex-col">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
+                <Link
+                  href={{ pathname: "/", hash: link.href }}
                   onClick={() => setIsOpen(false)}
                   className="block border-b border-line py-3 font-medium text-ink-muted transition-colors hover:text-ink"
                 >
                   {t(link.key)}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
