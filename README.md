@@ -1,15 +1,37 @@
 # TechToJob — Landing
 
-Landing de TechToJob para el Torneo #2: la puerta de entrada de la comunidad
-de desarrolladores y empresas tech en español.
+Landing de TechToJob para el **Torneo #2**: la puerta de entrada de la
+comunidad de desarrolladores y empresas tech en español. Diseño
+_Energía eléctrica_: fondo oscuro con acentos teal, rejilla y detalles
+luminosos, todo con CSS nativo.
 
 ## Stack
 
-- **Next.js 16** (App Router) con TypeScript
-- **Tailwind CSS v4** (obligatorio en las bases del torneo)
-- **Sora** vía `next/font/google` (única fuente, autoalojada, tres pesos: 400/600/700)
-- Iconos: **Lucide** (`lucide-react`)
+- **Next.js 16** (App Router) con **TypeScript** y **React 19**
+- **Tailwind CSS v4** (obligatorio en las bases del torneo), tokens vía `@theme`
+- **Sora** autoalojada: cargada con `next/font/google` en el layout (variable);
+  la imagen OG usa además los TTFs locales `src/fonts/Sora-400.ttf` y
+  `Sora-700.ttf` porque satori no acepta woff2
 - **next-intl** para i18n (español en `/`, inglés en `/en`)
+- Iconos: **Lucide** (`lucide-react`)
+
+## Empezar
+
+Requiere Node.js 20.9 o superior.
+
+```bash
+npm install
+npm run dev      # desarrollo (http://localhost:3000)
+npm run build    # build de producción
+npm run lint     # eslint
+npm run start    # servir el build
+```
+
+## Configuración
+
+Copia `.env.example` a `.env` y ajusta `NEXT_PUBLIC_SITE_URL` a la URL real del
+deploy. Sin la variable, el layout usa `https://techtojob-landing.vercel.app`
+como fallback (canonical, Open Graph y JSON-LD).
 
 ## Paleta
 
@@ -17,81 +39,94 @@ Los tres colores base son fijos y dominan el diseño:
 
 | Token | Color | Uso |
 | --- | --- | --- |
-| `ink` | `#2f3436` | Fondos oscuros, texto principal, botones |
-| `teal` | `#84c0bf` | Fondo de franjas, botones, detalles |
+| `ink` | `#2f3436` | Fondo oscuro del hero, texto principal, botones |
+| `teal` | `#84c0bf` | Franjas, botones, detalles y glow |
 | `paper` | `#ffffff` | Fondos claros |
 
-Grises intermedios (`ink-muted`, `line`, `mist`) para textos secundarios y
-bordes, como permite el brief. El teal nunca se usa como texto de párrafo:
-sobre blanco no alcanza el contraste AA, por eso va solo en fondos, botones y
-detalles (mismas indicaciones del brief).
+Acompañan grises intermedios y variantes (permitidos por el brief):
 
-## Animaciones
+`ink-soft` `#3d4346`, `ink-muted` `#565d60`, `teal-dark` `#5f9c9b`,
+`mist` `#f4f6f6`, `line` `#e4e9e9`, y los tokens `--shadow-glow` /
+`--shadow-glow-sm` (halo teal derivado con `color-mix`).
 
-Sin JavaScript ni dependencias externas: todo es CSS nativo sobre Tailwind v4.
+El teal nunca se usa como texto de párrafo: sobre blanco no alcanza el
+contraste AA, por eso va solo en fondos, botones y detalles (mismas
+indicaciones del brief).
 
-- **Hero**: entrada con fade-up escalonado al cargar (badge, título, párrafo, CTA).
-- **Cards**: reveal al scroll con scroll-driven animations
-  (`animation-timeline: view()`), sin IntersectionObserver.
-- **Micro-interacciones**: cards con elevación y sombra al hover, subrayado
-  animado en los números de pasos (`group-hover`), botones con `active:scale`.
-- **Accesibilidad**: reset global con `prefers-reduced-motion` que anula
-  animaciones y transiciones de un tiro.
+## Secciones
 
-## Orden de secciones
+Orden de la landing (el brief lo marca como orientativo salvo hero y footer):
 
-El brief marca el orden como orientativo salvo hero y footer. Mantengo el orden
-canónico porque el recorrido narrativo es bueno: hero → cómo funciona →
-talento/empresas (los dos lados del match) → torneos (prueba de valor) →
-networking → noticias → newsletter → cierre.
+`Hero` → `Ticker` (cinta marquee localizada) → `HowItWorks` → `Talent` →
+`Companies` → `Tournaments` → `Networking` → `News` → `Newsletter` → `Closing`.
 
 Cambios respecto al brief:
 
 - **Newsletter** va en una franja teal entre Noticias y el Cierre, antes del
-  footer (el brief lo sugiere explícitamente: no compite con el CTA del hero).
-- El **Cierre** replica el CTA del Discord como último empujón visual sobre
-  fondo oscuro, antes del footer.
+  footer (no compite con el CTA del hero).
+- El **Cierre** replica el CTA de Discord como empujón visual final sobre fondo
+  oscuro, antes del footer.
 - **Hero y Footer** se mantienen fijos en su lugar.
-
-## Origen de los recursos visuales
-
-- **Logos**: `public/` (SVG facilitados por la organización).
-  Se usa `v1Positivo.svg` en fondos claros (header y footer) y
-  `SímboloNegativo.svg` (versión teal) sobre el fondo oscuro del hero.
-- **Iconos**: [Lucide](https://lucide.dev) — licencia ISC, uso libre comercial.
-- **Imágenes ilustrativas**: ninguna de banco; los mockups de UI (perfil,
-  vacante, canal de Discord) son puro HTML/CSS, sin assets externos.
-
-## SEO
-
-- `<html lang>` dinámico por locale, un solo `<h1>`, jerarquía h2/h3 sin saltos.
-- Metadata API de Next con `title.template` (`%s | TechToJob`), `metadataBase`
-  y `description` en el layout.
-- Open Graph y Twitter Card completos. La imagen OG (1200×630) se genera con
-  `next/og` (ImageResponse) en `src/app/[locale]/opengraph-image.tsx`.
-- JSON-LD `Organization` con nombre, URL, logo y redes en el layout.
-- HTML semántico: `header`, `nav`, `main`, `section`, `article`, `footer`;
-  todo lo que navega es `<a>`, nada de div clicables.
-- URLs de anclas legibles: `#como-funciona`, `#talento`, `#empresas`,
-  `#torneos`, `#networking`, `#noticias`, `#newsletter`.
-- Páginas legales reales (`/privacy`, `/legal`, `/cookies`, y sus versiones en
-  `/en/…`) para que los enlaces del footer no queden en 404 en la publicación.
 
 ## Internacionalización
 
 Cada locale es un segmento dinámico `[locale]` con prerender estático
 (`generateStaticParams` → `['es', 'en']`). El texto del sitio vive en
-`messages/{locale}.json`, nunca en los componentes.
+`messages/{locale}.json`, nunca en los componentes, y el tipo
+`src/i18n/messages.d.ts` se deriva automáticamente de `es.json`.
 
 - **`src/i18n/routing.ts`** — define `['es', 'en']`, default `es` y
   `localePrefix: 'as-needed'` (español en `/` sin prefijo, inglés en `/en`).
 - **`src/i18n/navigation.ts`** — wrappers tipados de `Link`/`useRouter`/
-  `usePathname` que ya manejan el locale.
+  `usePathname` que manejan el locale.
 - **`src/i18n/request.ts`** — carga `messages/{locale}.json` por request.
 - **`src/proxy.ts`** — detección de idioma del navegador (`Accept-Language`,
   cookie `NEXT_LOCALE`) y redirección a la ruta correcta. Es la convención
   `proxy` de Next 16 (reemplaza al `middleware` deprecado).
 - Selector **ES | EN** en el header para cambiar de idioma sin perder la ruta.
+
+### Navegación y anchors
+
+Los enlaces de sección usan el `Link` de **next-intl** con
+`{ pathname: "/", hash }`: funcionan desde cualquier página (incluidas las
+legales) y preservan el locale. Los logos del header y footer llevan a `/`.
+
+Anchors canónicos (en inglés, con `scroll-mt` para el header fijo):
+`#home`, `#how-it-works`, `#talent`, `#companies`, `#tournaments`,
+`#networking`, `#news`, `#newsletter`.
+
+## Animaciones
+
+Sin JavaScript ni dependencias externas: todo es CSS nativo sobre Tailwind v4.
+
+- **Hero**: entrada con fade-up escalonado al cargar (badge, título, párrafo,
+  CTA).
+- **Cards**: reveal al scroll con scroll-driven animations
+  (`animation-timeline: view()`), sin IntersectionObserver.
+- **Ticker**: cinta marquee continua con `@keyframes marquee` (45s; en mobile
+  baja a 60s para lectura cómoda).
+- **Micro-interacciones**: cards con elevación y sombra al hover, botones con
+  `active:scale`, cursor del terminal y puntos de estado con `animate-blink`,
+  símbolo flotante con `animate-float`.
+- **Accesibilidad**: reset global con `prefers-reduced-motion` que anula
+  animaciones, transiciones y scroll suave de un tiro.
+
+## SEO
+
+- `<html lang>` dinámico por locale, un solo `<h1>`, jerarquía h2/h3 sin
+  saltos.
+- Metadata API de Next con `title.template` (`%s | TechToJob`), `metadataBase`
+  y descripción por idioma en el layout.
+- Open Graph y Twitter Card completos y localizados.
+- **Imagen OG por locale** (1200×630 PNG): `src/app/[locale]/opengraph-image.tsx`
+  con `next/og` (ImageResponse), traducciones del namespace `ogImage` y el
+  símbolo de la marca (versión teal sobre oscuro). El `alt` es estático por
+  convención de Next.
+- JSON-LD `Organization` con nombre, URL, logo y redes en el layout.
+- HTML semántico: `header`, `nav`, `main`, `section`, `article`, `footer`;
+  todo lo que navega es un enlace real.
+- Páginas legales reales (`/privacy`, `/legal`, `/cookies` y sus versiones en
+  `/en/…`) para que los enlaces del footer no queden en 404.
 
 ## Estructura de rutas
 
@@ -102,7 +137,7 @@ el mismo segmento para heredar el marco:
 ```
 src/
   app/
-    globals.css             # tokens de Tailwind v4
+    globals.css             # tokens de Tailwind v4, utilities y keyframes
     icon.svg                # favicon compartido entre locales
     [locale]/
       layout.tsx            # raíz: metadata, JSON-LD, fuentes, Header/Footer
@@ -110,8 +145,11 @@ src/
       privacy/page.tsx      # política de privacidad
       legal/page.tsx        # aviso legal
       cookies/page.tsx      # política de cookies
-      opengraph-image.tsx   # imagen OG 1200×630 (next/og)
-  components/               # secciones + Header con nav y selector de idioma
+      opengraph-image.tsx   # imagen OG por locale 1200×630 (next/og)
+  components/               # secciones + Header, Footer y piezas compartidas
+    DiscordCtaLink.tsx      # CTA de Discord reutilizable (con glow)
+    Eyebrow.tsx             # eyebrow + SECTION_TITLE_CLASS compartidos
+  fonts/                    # Sora en TTF (400/700) solo para la imagen OG
   i18n/                     # routing, navigation, request, tipos de mensajes
   proxy.ts                  # detección/redirección de locale (Next 16)
 messages/
@@ -119,18 +157,14 @@ messages/
   en.json                   # textos en inglés
 ```
 
-## Configuración
+## Origen de los recursos visuales
 
-Copia `.env.example` a `.env` y ajusta `NEXT_PUBLIC_SITE_URL` a la URL real del
-deploy. Sin variable, se usa `https://techtojob-landing.vercel.app` como fallback
-(hasta conectar el dominio propio en Vercel).
-
-```bash
-npm install
-npm run dev      # desarrollo
-npm run build    # build de producción
-npm run lint     # eslint
-```
+- **Logos**: `public/logo-positive.svg` (marca sobre fondos claros: header,
+  footer y JSON-LD) y `public/logo-negative.svg` (versión teal sobre oscuro:
+  imagen OG). SVG propios de la organización.
+- **Iconos**: [Lucide](https://lucide.dev) — licencia ISC, uso libre comercial.
+- **Imágenes ilustrativas**: ninguna de banco; los mockups de UI (perfil,
+  vacante, canal de Discord) son puro HTML/CSS, sin assets externos.
 
 ## Verificación
 
