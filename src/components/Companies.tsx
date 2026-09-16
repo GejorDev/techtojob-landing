@@ -1,37 +1,41 @@
 import { FileText, Users, Search } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import Eyebrow, { SECTION_TITLE_CLASS } from "./Eyebrow";
 
-const iconos = [FileText, Users, Search];
+const icons = [FileText, Users, Search];
 
-type Beneficio = { title: string; text: string };
+type Benefit = { title: string; text: string };
 
 export default async function Companies() {
   const t = await getTranslations("companies");
-  const beneficios = t.raw("benefits") as Beneficio[];
-  const requisitos = t.raw("card.requirements") as string[];
+  const benefits = t.raw("benefits") as Benefit[];
+  const requirements = t.raw("card.requirements") as string[];
 
   return (
     <section
-      id="empresas"
+      id="companies"
       className="scroll-mt-16 bg-mist"
-      aria-labelledby="empresas-titulo"
+      aria-labelledby="companies-heading"
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-24">
         <div className="order-2 animate-view lg:order-1">
-          <div className="rounded-3xl border border-line bg-paper p-8 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/5 sm:p-10">
+          <div className="rounded-3xl border border-line bg-paper p-8 transition duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-lg hover:shadow-ink/5 sm:p-10">
             <div className="flex items-center justify-between">
               <p className="font-semibold text-ink">{t("card.job")}</p>
-              <span className="rounded-full bg-teal/15 px-3 py-1 text-sm font-medium text-ink">
+              <span className="rounded-full bg-teal/20 px-3 py-1 text-sm font-medium text-ink">
                 {t("card.status")}
               </span>
             </div>
             <ul className="mt-5 space-y-3 text-sm text-ink-muted">
-              {requisitos.map((requisito) => (
-                <li key={requisito} className="flex gap-2.5">
-                  <span className="text-teal-dark" aria-hidden="true">
+              {requirements.map((requirement) => (
+                <li key={requirement} className="flex gap-2.5">
+                  <span
+                    className="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal/15 text-xs font-bold text-teal-dark"
+                    aria-hidden="true"
+                  >
                     ✓
                   </span>
-                  {requisito}
+                  {requirement}
                 </li>
               ))}
             </ul>
@@ -40,7 +44,7 @@ export default async function Companies() {
               <div className="mt-3 flex -space-x-2" aria-hidden="true">
                 {["D", "J", "A", "S"].map((inicial, i) => (
                   <div
-                    key={i}
+                    key={inicial}
                     className={`flex h-10 w-10 items-center justify-center rounded-full border-2 border-paper text-sm font-semibold ${
                       i % 2 === 0 ? "bg-teal text-ink" : "bg-ink text-white"
                     }`}
@@ -54,12 +58,10 @@ export default async function Companies() {
         </div>
 
         <div className="order-1 lg:order-2">
-          <p className="text-sm font-semibold uppercase tracking-widest text-ink-muted">
-            {t("eyebrow")}
-          </p>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
-            id="empresas-titulo"
-            className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
+            id="companies-heading"
+            className={SECTION_TITLE_CLASS}
           >
             {t("title")}
           </h2>
@@ -67,12 +69,12 @@ export default async function Companies() {
             {t("subtitle")}
           </p>
           <ul className="mt-7 animate-view space-y-5">
-            {beneficios.map((item, i) => {
-              const Icono = iconos[i] ?? iconos[0];
+            {benefits.map((item, i) => {
+              const Icon = icons[i] ?? icons[0];
               return (
                 <li key={item.title} className="flex gap-4">
                   <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal/15">
-                    <Icono className="h-4 w-4 text-teal-dark" aria-hidden="true" />
+                    <Icon className="h-4 w-4 text-teal-dark" aria-hidden="true" />
                   </span>
                   <div>
                     <h3 className="font-semibold text-ink">{item.title}</h3>

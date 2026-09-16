@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
+import Eyebrow, { SECTION_TITLE_CLASS } from "./Eyebrow";
 
-type Noticia = {
+type NewsItem = {
   title: string;
   summary: string;
   category: string;
@@ -11,22 +12,20 @@ type Noticia = {
 
 export default async function News() {
   const t = await getTranslations("news");
-  const noticias = t.raw("items") as Noticia[];
+  const newsItems = t.raw("items") as NewsItem[];
 
   return (
     <section
-      id="noticias"
+      id="news"
       className="scroll-mt-16"
-      aria-labelledby="noticias-titulo"
+      aria-labelledby="news-heading"
     >
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-ink-muted">
-            {t("eyebrow")}
-          </p>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
-            id="noticias-titulo"
-            className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
+            id="news-heading"
+            className={SECTION_TITLE_CLASS}
           >
             {t("title")}
           </h2>
@@ -34,27 +33,27 @@ export default async function News() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {noticias.map((noticia) => (
+          {newsItems.map((item) => (
             <article
-              key={noticia.title}
-              className="flex animate-view flex-col rounded-2xl border border-line bg-mist p-6 transition duration-200 hover:-translate-y-1 hover:border-teal hover:shadow-lg hover:shadow-ink/5"
+              key={item.title}
+              className="flex animate-view flex-col rounded-2xl border border-line bg-mist p-6 transition duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-lg hover:shadow-ink/5"
             >
               <div className="flex items-center gap-3 text-sm">
-                <span className="rounded-full bg-teal/15 px-3 py-1 font-medium text-ink">
-                  {noticia.category}
+                <span className="rounded-full bg-teal/20 px-3 py-1 font-medium text-ink">
+                  {item.category}
                 </span>
-                <time dateTime={noticia.dateTime} className="text-ink-muted">
-                  {noticia.date}
+                <time dateTime={item.dateTime} className="text-ink-muted">
+                  {item.date}
                 </time>
               </div>
               <h3 className="mt-4 text-xl font-semibold leading-snug text-ink">
-                {noticia.title}
+                {item.title}
               </h3>
               <p className="mt-3 flex-1 leading-relaxed text-ink-muted">
-                {noticia.summary}
+                {item.summary}
               </p>
               <a
-                href={noticia.href}
+                href={item.href}
                 className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink transition-colors hover:text-teal-dark"
               >
                 {t("readMore")}

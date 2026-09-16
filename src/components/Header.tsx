@@ -8,12 +8,12 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 
 const navLinks = [
-  { href: "#como-funciona", key: "links.how" },
-  { href: "#talento", key: "links.talent" },
-  { href: "#empresas", key: "links.companies" },
-  { href: "#torneos", key: "links.tournaments" },
+  { href: "#how-it-works", key: "links.how" },
+  { href: "#talent", key: "links.talent" },
+  { href: "#companies", key: "links.companies" },
+  { href: "#tournaments", key: "links.tournaments" },
   { href: "#networking", key: "links.networking" },
-  { href: "#noticias", key: "links.news" },
+  { href: "#news", key: "links.news" },
 ] as const;
 
 export default function Header() {
@@ -21,7 +21,7 @@ export default function Header() {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
-  const [abierto, setAbierto] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   function switchLocale(nextLocale: (typeof routing.locales)[number]) {
     router.replace(pathname, { locale: nextLocale });
@@ -31,7 +31,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a
-          href="#inicio"
+          href="#home"
           className="flex h-9 w-auto items-center"
           aria-label={t("backHome")}
         >
@@ -86,19 +86,19 @@ export default function Header() {
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-10 items-center rounded-full bg-ink px-5 text-sm font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98] max-lg:hidden"
+            className="inline-flex h-10 items-center rounded-full bg-teal px-5 text-sm font-semibold text-ink transition hover:bg-teal-dark active:scale-[0.98] max-lg:hidden"
           >
             {t("discord")}
           </a>
           <button
             type="button"
-            onClick={() => setAbierto((prev) => !prev)}
+            onClick={() => setIsOpen((prev) => !prev)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink lg:hidden"
-            aria-expanded={abierto}
-            aria-controls="menu-movil"
-            aria-label={abierto ? t("closeMenu") : t("openMenu")}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            aria-label={isOpen ? t("closeMenu") : t("openMenu")}
           >
-            {abierto ? (
+            {isOpen ? (
               <X className="h-5 w-5" aria-hidden="true" />
             ) : (
               <Menu className="h-5 w-5" aria-hidden="true" />
@@ -107,9 +107,9 @@ export default function Header() {
         </div>
       </div>
 
-      {abierto && (
+      {isOpen && (
         <nav
-          id="menu-movil"
+          id="mobile-menu"
           className="border-t border-line bg-paper px-5 pb-6 pt-3 lg:hidden"
           aria-label={t("mobileNavAria")}
         >
@@ -118,7 +118,7 @@ export default function Header() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  onClick={() => setAbierto(false)}
+                  onClick={() => setIsOpen(false)}
                   className="block border-b border-line py-3 font-medium text-ink-muted transition-colors hover:text-ink"
                 >
                   {t(link.key)}
@@ -130,7 +130,7 @@ export default function Header() {
             href="https://discord.gg/h9FFgKdkRd"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex h-11 w-full items-center justify-center rounded-full bg-ink font-semibold text-white transition hover:bg-ink-soft active:scale-[0.98]"
+            className="mt-5 inline-flex h-11 w-full items-center justify-center rounded-full bg-teal font-semibold text-ink transition hover:bg-teal-dark active:scale-[0.98]"
           >
             {t("discord")}
           </a>

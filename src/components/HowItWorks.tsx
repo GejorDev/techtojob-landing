@@ -1,28 +1,27 @@
 import { MessagesSquare, UserRoundPlus, Sparkles } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import Eyebrow, { SECTION_TITLE_CLASS } from "./Eyebrow";
 
-const iconos = [MessagesSquare, UserRoundPlus, Sparkles];
+const icons = [MessagesSquare, UserRoundPlus, Sparkles];
 
-type Paso = { number: string; title: string; text: string };
+type Step = { number: string; title: string; text: string };
 
 export default async function HowItWorks() {
   const t = await getTranslations("howItWorks");
-  const pasos = t.raw("steps") as Paso[];
+  const steps = t.raw("steps") as Step[];
 
   return (
     <section
-      id="como-funciona"
+      id="how-it-works"
       className="scroll-mt-16 bg-mist"
-      aria-labelledby="como-funciona-titulo"
+      aria-labelledby="how-it-works-heading"
     >
       <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-ink-muted">
-            {t("eyebrow")}
-          </p>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
-            id="como-funciona-titulo"
-            className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
+            id="how-it-works-heading"
+            className={SECTION_TITLE_CLASS}
           >
             {t("title")}
           </h2>
@@ -30,23 +29,26 @@ export default async function HowItWorks() {
         </div>
 
         <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {pasos.map((paso, i) => {
-            const Icono = iconos[i] ?? iconos[0];
+          {steps.map((step, i) => {
+            const Icon = icons[i] ?? icons[0];
             return (
               <li
-                key={paso.number}
-                className="group animate-view rounded-2xl border border-line bg-paper p-7 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/5"
+                key={step.number}
+                className="group animate-view rounded-2xl border border-line bg-paper p-7 transition duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-lg hover:shadow-ink/5"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-4xl font-bold text-teal" aria-hidden="true">
-                    {paso.number}
+                  <span
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-teal/20 text-xl font-bold text-ink"
+                    aria-hidden="true"
+                  >
+                    {step.number}
                   </span>
-                  <Icono className="h-6 w-6 text-teal-dark" aria-hidden="true" />
+                  <Icon className="h-6 w-6 text-teal-dark" aria-hidden="true" />
                 </div>
                 <h3 className="relative mt-4 w-fit pb-1 text-xl font-semibold text-ink transition-colors after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-teal after:transition-transform after:duration-200 group-hover:after:scale-x-100">
-                  {paso.title}
+                  {step.title}
                 </h3>
-                <p className="mt-3 leading-relaxed text-ink-muted">{paso.text}</p>
+                <p className="mt-3 leading-relaxed text-ink-muted">{step.text}</p>
               </li>
             );
           })}

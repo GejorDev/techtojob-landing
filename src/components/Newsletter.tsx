@@ -5,29 +5,29 @@ import { useTranslations } from "next-intl";
 
 export default function Newsletter() {
   const t = useTranslations("newsletter");
-  const [correo, setCorreo] = useState("");
-  const [estado, setEstado] = useState<"idle" | "enviado" | "error">("idle");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "sent" | "error">("idle");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!correo.includes("@") || !correo.includes(".")) {
-      setEstado("error");
+    if (!email.includes("@") || !email.includes(".")) {
+      setStatus("error");
       return;
     }
-    setEstado("enviado");
+    setStatus("sent");
   }
 
   return (
     <section
       id="newsletter"
       className="scroll-mt-16 bg-teal"
-      aria-labelledby="newsletter-titulo"
+      aria-labelledby="newsletter-heading"
     >
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:py-20">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
             <h2
-              id="newsletter-titulo"
+              id="newsletter-heading"
               className="text-3xl font-bold tracking-tight text-ink"
             >
               {t("title")}
@@ -37,7 +37,7 @@ export default function Newsletter() {
             </p>
           </div>
 
-          {estado === "enviado" ? (
+          {status === "sent" ? (
             <div
               className="rounded-2xl bg-ink px-6 py-6 text-white"
               role="status"
@@ -51,22 +51,22 @@ export default function Newsletter() {
               className="flex flex-col gap-3 sm:flex-row"
               noValidate
             >
-              <label htmlFor="correo" className="sr-only">
+              <label htmlFor="email" className="sr-only">
                 {t("label")}
               </label>
               <input
-                id="correo"
+                id="email"
                 type="email"
                 required
-                value={correo}
+                value={email}
                 onChange={(event) => {
-                  setCorreo(event.target.value);
-                  if (estado === "error") setEstado("idle");
+                  setEmail(event.target.value);
+                  if (status === "error") setStatus("idle");
                 }}
                 placeholder={t("placeholder")}
                 className="h-13 max-sm:h-22 flex-1 rounded-full border-2 border-ink/20 bg-paper px-5 text-base text-ink placeholder:text-ink-muted focus:border-ink focus:outline-none"
-                aria-describedby={estado === "error" ? "correo-error" : undefined}
-                aria-invalid={estado === "error"}
+                aria-describedby={status === "error" ? "email-error" : undefined}
+                aria-invalid={status === "error"}
               />
               <button
                 type="submit"
@@ -76,10 +76,10 @@ export default function Newsletter() {
               </button>
             </form>
           )}
-          {estado === "error" && (
+          {status === "error" && (
             <p
-              id="correo-error"
-              className="text-sm font-medium text-ink sm:col-span-2"
+              id="email-error"
+              className="text-sm font-semibold text-ink sm:col-span-2"
             >
               {t("error")}
             </p>

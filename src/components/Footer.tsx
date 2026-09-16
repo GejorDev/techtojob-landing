@@ -7,11 +7,11 @@ type FooterLink = { text: string; href: string };
 export default async function Footer() {
   const t = await getTranslations("footer");
 
-  const bloques = t.raw("blocks") as {
+  const blocks = t.raw("blocks") as {
     title: string;
     links: FooterLink[];
   }[];
-  const redes = t.raw("social") as { name: string; href: string }[];
+  const social = t.raw("social") as { name: string; href: string }[];
 
   return (
     <footer className="border-t border-line bg-mist">
@@ -19,7 +19,7 @@ export default async function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <a
-              href="#inicio"
+              href="#home"
               className="inline-block transition-opacity hover:opacity-80"
               aria-label={t("backHome")}
             >
@@ -37,27 +37,27 @@ export default async function Footer() {
             </p>
           </div>
 
-          {bloques.map((bloque) => (
-            <nav key={bloque.title} aria-label={bloque.title}>
+          {blocks.map((block) => (
+            <nav key={block.title} aria-label={block.title}>
               <h2 className="text-sm font-semibold uppercase tracking-wider text-ink">
-                {bloque.title}
+                {block.title}
               </h2>
               <ul className="mt-4 space-y-2.5">
-                {bloque.links.map((enlace) => (
-                  <li key={enlace.text}>
-                    {enlace.href.startsWith("#") ? (
+                {block.links.map((link) => (
+                  <li key={link.text}>
+                    {link.href.startsWith("#") ? (
                       <a
-                        href={enlace.href}
+                        href={link.href}
                         className="text-sm text-ink-muted transition-colors hover:text-ink"
                       >
-                        {enlace.text}
+                        {link.text}
                       </a>
                     ) : (
                       <Link
-                        href={enlace.href}
+                        href={link.href}
                         className="text-sm text-ink-muted transition-colors hover:text-ink"
                       >
-                        {enlace.text}
+                        {link.text}
                       </Link>
                     )}
                   </li>
@@ -73,15 +73,15 @@ export default async function Footer() {
           </p>
           <nav aria-label={t("socialAria")}>
             <ul className="flex gap-4">
-              {redes.map((red) => (
-                <li key={red.name}>
+              {social.map((item) => (
+                <li key={item.name}>
                   <a
-                    href={red.href}
+                    href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-ink transition-colors hover:text-teal-dark"
                   >
-                    {red.name}
+                    {item.name}
                   </a>
                 </li>
               ))}

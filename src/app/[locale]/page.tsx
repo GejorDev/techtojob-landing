@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import Hero from "@/components/Hero";
+import Ticker from "@/components/Ticker";
 import HowItWorks from "@/components/HowItWorks";
 import Talent from "@/components/Talent";
 import Companies from "@/components/Companies";
@@ -21,6 +22,7 @@ export default async function Home({
   return (
     <>
       <Hero />
+      <Ticker />
       <HowItWorks />
       <Talent />
       <Companies />

@@ -12,7 +12,8 @@
 
   --font-sans: var(--font-sora);
 
-  --breakpoint-xs: 30rem;
+  --shadow-glow: 0 0 28px color-mix(in srgb, var(--color-teal) 35%, transparent);
+  --shadow-glow-sm: 0 0 24px color-mix(in srgb, var(--color-teal) 30%, transparent);
 }
 
 :root {
@@ -54,6 +55,62 @@ body {
   animation: fade-up 0.7s ease-out backwards;
   animation-timeline: view();
   animation-range: entry 0% entry 40%;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@utility animate-blink {
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee 45s linear infinite;
+}
+
+/* Mobile (< 40rem): loop slows to 60s minimum for comfortable reading.
+   Unlayered rule to override the utility-layer duration. */
+@media (max-width: 40rem) {
+  .animate-marquee {
+    animation-duration: 60s;
+  }
+}
+
+@utility bg-grid {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
 }
 
 @media (prefers-reduced-motion: reduce) {
