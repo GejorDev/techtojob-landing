@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export default function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <p className="text-sm font-semibold uppercase tracking-widest text-ink-muted">
+    <p className="font-mono text-sm font-semibold uppercase tracking-widest text-ink-muted">
       {children}
     </p>
   );

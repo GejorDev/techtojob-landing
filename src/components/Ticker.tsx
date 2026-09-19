@@ -33,7 +33,7 @@ export default async function Ticker() {
               names.map((name) => (
                 <span
                   key={`${copy}-${rep}-${name}`}
-                  className="flex items-center gap-10 whitespace-nowrap text-sm font-medium text-zinc-300"
+                  className="flex items-center gap-10 whitespace-nowrap font-mono text-sm font-medium text-zinc-300"
                 >
                   <span className="text-teal">#</span>
                   {name}

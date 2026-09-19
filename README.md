@@ -9,9 +9,13 @@ luminosos, todo con CSS nativo.
 
 - **Next.js 16** (App Router) con **TypeScript** y **React 19**
 - **Tailwind CSS v4** (obligatorio en las bases del torneo), tokens vía `@theme`
-- **Sora** autoalojada: cargada con `next/font/google` en el layout (variable);
-  la imagen OG usa además los TTFs locales `src/fonts/Sora-400.ttf` y
-  `Sora-700.ttf` porque satori no acepta woff2
+- **Tipografía** (autoalojada con `next/font/google`, variable + `display: swap`):
+  - **Sora** → display/titulares (`--font-display`); la imagen OG usa además los
+    TTFs locales `src/fonts/Sora-400.ttf` y `Sora-700.ttf` porque satori no
+    acepta woff2
+  - **Inter** → cuerpo (`--font-sans`), aplicada globalmente en `body`
+  - **JetBrains Mono** → acentos técnicos (`--font-mono`): terminal del hero,
+    eyebrows, ticker y etiquetas
 - **next-intl** para i18n (español en `/`, inglés en `/en`)
 - Iconos: **Lucide** (`lucide-react`)
 

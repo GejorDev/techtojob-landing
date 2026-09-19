@@ -10,7 +10,9 @@
   --color-mist: #f4f6f6;
   --color-line: #e4e9e9;
 
-  --font-sans: var(--font-sora);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-sora);
+  --font-mono: var(--font-jetbrains-mono);
 
   --shadow-glow: 0 0 28px color-mix(in srgb, var(--color-teal) 35%, transparent);
   --shadow-glow-sm: 0 0 24px color-mix(in srgb, var(--color-teal) 30%, transparent);
@@ -28,7 +30,18 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
 }
 
 ::selection {
