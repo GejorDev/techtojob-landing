@@ -30,7 +30,9 @@
       "companies": "Companies",
       "tournaments": "Tournaments",
       "networking": "Networking",
-      "news": "News"
+      "testimonials": "Testimonials",
+      "news": "News",
+      "newsletter": "Newsletter"
     },
     "localeLabel": "Change language",
     "discord": "Join the Discord",
@@ -162,6 +164,38 @@
         }
       ]
     }
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What people already inside say",
+    "subtitle": "Real people from the community sharing what changed for them since they joined. Every testimonial links to the person's profile, so you can check who said it.",
+    "profileLinkAria": "View {name}'s profile",
+    "items": [
+      {
+        "name": "Lucía Fernández",
+        "role": "Frontend developer",
+        "quote": "I joined not sure there was room for me. Two weeks later someone from a channel had already recommended me for an interview: here you build your profile by taking part.",
+        "href": "#"
+      },
+      {
+        "name": "Diego Roldán",
+        "role": "Software engineer",
+        "quote": "The first tournament gave me something real to talk about in an interview. They didn't hire me for my CV: they hired me for what they'd already seen me build.",
+        "href": "#"
+      },
+      {
+        "name": "Marta Vidal",
+        "role": "Junior changing careers",
+        "quote": "I come from another industry and didn't have to prove anything on paper. I took part, asked without fear, and people saw what I was about.",
+        "href": "#"
+      },
+      {
+        "name": "Elena Marco",
+        "role": "Product lead",
+        "quote": "We posted one role and within two days we were already talking to candidates the community knew from their contributions. Zero surprises in the interview.",
+        "href": "#"
+      }
+    ]
   },
   "news": {
     "eyebrow": "News",

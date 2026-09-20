@@ -18,7 +18,7 @@ export default async function Companies() {
       className="scroll-mt-16 bg-mist"
       aria-labelledby="companies-heading"
     >
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-24">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-24">
         <div className="order-2 animate-view lg:order-1">
           <div className="rounded-3xl border border-line bg-paper p-8 transition duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-lg hover:shadow-ink/5 sm:p-10">
             <div className="flex items-center justify-between">

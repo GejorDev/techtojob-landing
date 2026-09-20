@@ -26,7 +26,7 @@ export default async function Networking() {
       className="scroll-mt-16 bg-mist"
       aria-labelledby="networking-heading"
     >
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16 lg:py-24">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16 lg:py-24">
         <div>
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2

@@ -18,7 +18,7 @@ export default async function Tournaments() {
       className="scroll-mt-16"
       aria-labelledby="tournaments-heading"
     >
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <Eyebrow>{t("eyebrow")}</Eyebrow>

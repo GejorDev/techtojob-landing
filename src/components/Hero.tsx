@@ -17,7 +17,7 @@ export default async function Hero() {
         <div className="absolute inset-0 bg-grid opacity-20" />
       </div>
 
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-28">
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-28">
         <div>
           <p className="inline-flex animate-fade-up items-center gap-2 rounded-full border border-teal/30 bg-teal/10 px-4 py-1.5 text-sm font-medium text-teal">
             <span className="h-2 w-2 rounded-full bg-teal" aria-hidden="true" />

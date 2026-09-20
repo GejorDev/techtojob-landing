@@ -30,7 +30,9 @@
       "companies": "Empresas",
       "tournaments": "Torneos",
       "networking": "Networking",
-      "news": "Noticias"
+      "testimonials": "Testimonios",
+      "news": "Noticias",
+      "newsletter": "Newsletter"
     },
     "localeLabel": "Cambiar idioma",
     "discord": "Entrar al Discord",
@@ -162,6 +164,38 @@
         }
       ]
     }
+  },
+  "testimonials": {
+    "eyebrow": "Testimonios",
+    "title": "Qué dice la gente que ya está dentro",
+    "subtitle": "Personas reales de la comunidad cuentan qué cambió para ellas desde que entraron. Cada testimonio enlaza al perfil de quien lo dice para que puedas verificar quién es.",
+    "profileLinkAria": "Ver el perfil de {name}",
+    "items": [
+      {
+        "name": "Lucía Fernández",
+        "role": "Desarrolladora frontend",
+        "quote": "Entré sin saber si había sitio para mí. A las dos semanas alguien del canal ya me había recomendado para una entrevista: aquí el perfil se construye participando.",
+        "href": "#"
+      },
+      {
+        "name": "Diego Roldán",
+        "role": "Ingeniero de software",
+        "quote": "El primer torneo me dio algo real que contar en una entrevista. No me contrataron por el CV: me contrataron por lo que ya me habían visto construir.",
+        "href": "#"
+      },
+      {
+        "name": "Marta Vidal",
+        "role": "Junior en transición",
+        "quote": "Vengo de otro sector y no tuve que demostrar nada con papeles. Participé, pregunté sin miedo y la gente vio de qué iba.",
+        "href": "#"
+      },
+      {
+        "name": "Elena Marco",
+        "role": "Responsable de producto",
+        "quote": "Publicamos una vacante y en dos días ya hablábamos con candidatos que la comunidad conocía por sus aportes. Cero sorpresas en la entrevista.",
+        "href": "#"
+      }
+    ]
   },
   "news": {
     "eyebrow": "Noticias",

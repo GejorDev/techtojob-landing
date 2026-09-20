@@ -18,10 +18,10 @@ export default async function News() {
   return (
     <section
       id="news"
-      className="scroll-mt-16"
+      className="scroll-mt-16 bg-mist"
       aria-labelledby="news-heading"
     >
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="max-w-2xl">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
@@ -37,7 +37,7 @@ export default async function News() {
           {newsItems.map((item) => (
             <article
               key={item.title}
-              className="flex animate-view flex-col rounded-2xl border border-line bg-mist p-6 transition duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-lg hover:shadow-ink/5"
+              className="flex animate-view flex-col rounded-2xl border border-line bg-paper p-6 transition duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-lg hover:shadow-ink/5"
             >
               <div className="flex items-center gap-3 text-sm">
                 <span className="rounded-full bg-teal/20 px-3 py-1 font-medium text-ink">

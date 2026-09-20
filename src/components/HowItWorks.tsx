@@ -16,7 +16,7 @@ export default async function HowItWorks() {
       className="scroll-mt-16 bg-mist"
       aria-labelledby="how-it-works-heading"
     >
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="max-w-2xl">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2

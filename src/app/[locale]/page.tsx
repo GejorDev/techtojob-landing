@@ -7,6 +7,7 @@ import Talent from "@/components/Talent";
 import Companies from "@/components/Companies";
 import Tournaments from "@/components/Tournaments";
 import Networking from "@/components/Networking";
+import Testimonials from "@/components/Testimonials";
 import News from "@/components/News";
 import Newsletter from "@/components/Newsletter";
 import Closing from "@/components/Closing";
@@ -28,6 +29,7 @@ export default async function Home({
       <Companies />
       <Tournaments />
       <Networking />
+      <Testimonials />
       <News />
       <Newsletter />
       <Closing />

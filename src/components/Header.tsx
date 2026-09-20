@@ -14,7 +14,9 @@ const navLinks = [
   { href: "#companies", key: "links.companies" },
   { href: "#tournaments", key: "links.tournaments" },
   { href: "#networking", key: "links.networking" },
+  { href: "#testimonials", key: "links.testimonials" },
   { href: "#news", key: "links.news" },
+  { href: "#newsletter", key: "links.newsletter" },
 ] as const;
 
 export default function Header() {
@@ -30,7 +32,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
           <Link
             href="/"
             className="flex h-9 w-auto items-center"
@@ -47,7 +49,7 @@ export default function Header() {
         </Link>
 
         <nav
-          className="hidden items-center gap-7 lg:flex"
+          className="hidden items-center gap-7 xl:flex"
           aria-label={t("navAria")}
         >
           {navLinks.map((link) => (
@@ -94,7 +96,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink xl:hidden"
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
             aria-label={isOpen ? t("closeMenu") : t("openMenu")}
@@ -111,7 +113,7 @@ export default function Header() {
       {isOpen && (
         <nav
           id="mobile-menu"
-          className="border-t border-line bg-paper px-5 pb-6 pt-3 lg:hidden"
+          className="border-t border-line bg-paper px-5 pb-6 pt-3 xl:hidden"
           aria-label={t("mobileNavAria")}
         >
           <ul className="flex flex-col">
