@@ -39,7 +39,7 @@ export default async function LegalPage({
   const sections = t.raw("sections") as LegalSection[];
 
   return (
-    <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 lg:py-20">
+    <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
       <Eyebrow>{legal("eyebrow")}</Eyebrow>
       <h1 className={SECTION_TITLE_CLASS}>
         {t("title")}
