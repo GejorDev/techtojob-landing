@@ -18,7 +18,7 @@ export default async function Talent() {
       aria-labelledby="talent-heading"
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-24">
-        <div className="animate-view">
+        <div>
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
             id="talent-heading"
@@ -62,7 +62,7 @@ export default async function Talent() {
         </div>
 
         <div
-          className="relative animate-view overflow-hidden rounded-3xl bg-ink p-8 text-white transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/10 sm:p-10"
+          className="relative overflow-hidden rounded-3xl bg-ink p-8 text-white transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/10 sm:p-10"
           aria-hidden="true"
         >
           <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-teal/10 blur-3xl" />

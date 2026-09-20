@@ -27,7 +27,7 @@ export default async function Networking() {
       aria-labelledby="networking-heading"
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16 lg:py-24">
-        <div className="animate-view">
+        <div>
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
             id="networking-heading"
@@ -72,7 +72,7 @@ export default async function Networking() {
           </a>
         </div>
 
-        <div className="animate-view rounded-3xl border border-line bg-paper p-6 sm:p-8">
+        <div className="rounded-3xl border border-line bg-paper p-6 sm:p-8">
           <div className="flex items-center gap-3 border-b border-line pb-5">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal">
               <Hash className="h-5 w-5 text-ink" aria-hidden="true" />

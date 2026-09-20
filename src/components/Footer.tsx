@@ -15,7 +15,7 @@ export default async function Footer() {
 
   return (
     <footer className="border-t border-line bg-mist">
-      <div className="mx-auto max-w-7xl animate-view px-5 py-14 sm:px-8">
+      <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link

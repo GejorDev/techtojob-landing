@@ -19,7 +19,7 @@ export default async function Tournaments() {
       aria-labelledby="tournaments-heading"
     >
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
-        <div className="flex animate-view flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h2
@@ -38,7 +38,7 @@ export default async function Tournaments() {
           </DiscordCtaLink>
         </div>
 
-        <div className="relative mt-12 animate-view overflow-hidden rounded-3xl bg-ink text-white">
+        <div className="relative mt-12 overflow-hidden rounded-3xl bg-ink text-white">
           <div aria-hidden="true" className="pointer-events-none absolute inset-0">
             <div className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-teal/15 blur-3xl" />
             <div className="absolute inset-0 bg-grid opacity-20" />

@@ -17,7 +17,7 @@ export default async function HowItWorks() {
       aria-labelledby="how-it-works-heading"
     >
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
-        <div className="max-w-2xl animate-view">
+        <div className="max-w-2xl">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
             id="how-it-works-heading"
@@ -34,7 +34,7 @@ export default async function HowItWorks() {
             return (
               <li
                 key={step.number}
-                className="group animate-view rounded-2xl border border-line bg-paper p-7 transition duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-lg hover:shadow-ink/5"
+                className="group rounded-2xl border border-line bg-paper p-7 transition duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-lg hover:shadow-ink/5"
               >
                 <div className="flex items-center justify-between">
                   <span

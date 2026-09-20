@@ -24,7 +24,7 @@ export default function Newsletter() {
       className="scroll-mt-16 bg-teal"
       aria-labelledby="newsletter-heading"
     >
-      <div className="mx-auto max-w-7xl animate-view px-5 py-16 sm:px-8 lg:py-20">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-20">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>
             <h2

@@ -19,7 +19,7 @@ export default async function Companies() {
       aria-labelledby="companies-heading"
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-24">
-        <div className="order-2 animate-view lg:order-1">
+        <div className="order-2 lg:order-1">
           <div className="rounded-3xl border border-line bg-paper p-8 transition duration-200 hover:-translate-y-1 hover:border-teal/50 hover:shadow-lg hover:shadow-ink/5 sm:p-10">
             <div className="flex items-center justify-between">
               <p className="font-semibold text-ink">{t("card.job")}</p>
@@ -58,7 +58,7 @@ export default async function Companies() {
           </div>
         </div>
 
-        <div className="order-1 animate-view lg:order-2">
+        <div className="order-1 lg:order-2">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
             id="companies-heading"
@@ -69,7 +69,7 @@ export default async function Companies() {
           <p className="mt-4 text-lg leading-relaxed text-ink-muted">
             {t("subtitle")}
           </p>
-          <ul className="mt-7 animate-view space-y-5">
+          <ul className="mt-7 space-y-5">
             {benefits.map((item, i) => {
               const Icon = icons[i] ?? icons[0];
               return (
