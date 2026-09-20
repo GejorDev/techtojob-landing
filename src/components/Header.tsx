@@ -113,7 +113,7 @@ export default function Header() {
       {isOpen && (
         <nav
           id="mobile-menu"
-          className="border-t border-line bg-paper px-5 pb-6 pt-3 xl:hidden"
+          className="absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper px-5 pb-6 pt-3 shadow-lg shadow-ink/5 xl:hidden"
           aria-label={t("mobileNavAria")}
         >
           <ul className="flex flex-col">
