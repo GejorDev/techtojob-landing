@@ -33,7 +33,7 @@ export default function Newsletter() {
             >
               {t("title")}
             </h2>
-            <p className="mt-3 text-lg leading-relaxed text-ink/80">
+            <p className="mt-3 text-lg leading-relaxed text-ink">
               {t("subtitle")}
             </p>
           </div>
