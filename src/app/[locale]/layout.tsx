@@ -45,6 +45,9 @@ export async function generateMetadata({
     namespace: "metadata",
   });
 
+  const isDefaultLocale = locale === routing.defaultLocale;
+  const canonical = isDefaultLocale ? "/" : `/${locale}`;
+
   return {
     metadataBase: new URL(siteUrl),
     title: {
@@ -54,12 +57,12 @@ export async function generateMetadata({
     description: t("description"),
     keywords: t.raw("keywords"),
     alternates: {
-      canonical: "/",
+      canonical,
     },
     openGraph: {
       title: t("openGraphTitle"),
       description: t("openGraphDescription"),
-      url: siteUrl,
+      url: isDefaultLocale ? siteUrl : `${siteUrl}/${locale}`,
       siteName: "TechToJob",
       locale: locale === "es" ? "es_ES" : "en_US",
       type: "website",
