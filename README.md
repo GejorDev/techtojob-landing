@@ -62,7 +62,8 @@ el brief.
 Orden de la landing; el brief lo marca como orientativo salvo hero y footer:
 
 `Hero` → `Ticker`, cinta marquee localizada → `HowItWorks` → `Talent` →
-`Companies` → `Tournaments` → `Networking` → `News` → `Newsletter` → `Closing`.
+`Companies` → `Tournaments` → `Networking` → `Testimonials` → `News` →
+`Newsletter` → `Closing`.
 
 Cambios respecto al brief:
 
@@ -174,5 +175,4 @@ messages/
 ## Verificación
 
 - `npm run build` sin errores y `npm run lint` limpio.
-- Lighthouse en móvil: objetivo SEO 100 y Accesibilidad/Rendimiento ≥ 90,
-  con captura adjunta en la entrega.
+- Lighthouse en móvil: objetivo SEO 100 y Accesibilidad/Rendimiento ≥ 90.
