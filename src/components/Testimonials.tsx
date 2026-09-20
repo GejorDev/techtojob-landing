@@ -52,7 +52,7 @@ export default async function Testimonials() {
               <figcaption className="mt-6 flex items-center gap-3 border-t border-line pt-5">
                 <span
                   aria-hidden="true"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal/15 text-sm font-semibold text-teal-dark"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-teal/15 text-sm font-semibold text-teal-deep"
                 >
                   {initials(item.name)}
                 </span>

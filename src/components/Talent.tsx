@@ -73,11 +73,11 @@ export default async function Talent() {
               </div>
               <div>
                 <p className="font-semibold">{t("card.name")}</p>
-                <p className="text-sm text-zinc-400">{t("card.stack")}</p>
+                <p className="text-sm text-zinc-300">{t("card.stack")}</p>
               </div>
             </div>
             <div className="mt-5 flex flex-wrap gap-2 text-sm">
-              <span className="rounded-full bg-teal/20 px-3 py-1 text-ink">
+              <span className="rounded-full bg-teal/20 px-3 py-1 text-white">
                 {t("card.level")}
               </span>
               <span className="rounded-full bg-white/10 px-3 py-1 text-zinc-300">
