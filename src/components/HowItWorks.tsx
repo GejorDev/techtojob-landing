@@ -17,7 +17,7 @@ export default async function HowItWorks() {
       aria-labelledby="how-it-works-heading"
     >
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl animate-view">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
             id="how-it-works-heading"

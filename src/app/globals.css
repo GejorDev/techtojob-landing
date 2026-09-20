@@ -50,6 +50,19 @@ body {
   color: #2f3436;
 }
 
+@keyframes rise-fade {
+  from {
+    /* Start from a fraction of 1 (not 0) so the element is an LCP
+       candidate on the first painted frame while still fading in. */
+    opacity: 0.01;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -62,7 +75,7 @@ body {
 }
 
 @utility animate-fade-up {
-  animation: fade-up 0.7s ease-out backwards;
+  animation: rise-fade 0.7s ease-out backwards;
 }
 
 @utility animate-view {

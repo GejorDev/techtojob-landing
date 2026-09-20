@@ -43,7 +43,7 @@ export default async function Hero() {
           className="relative hidden justify-center lg:flex"
           aria-hidden="true"
         >
-          <div className="w-full max-w-md animate-float rounded-2xl border border-white/10 bg-ink-soft/80 p-5 shadow-2xl backdrop-blur">
+          <div className="w-full max-w-md animate-[rise-fade_0.7s_ease-out_backwards,float_6s_ease-in-out_infinite] rounded-2xl border border-white/10 bg-ink-soft/80 p-5 shadow-2xl backdrop-blur">
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />

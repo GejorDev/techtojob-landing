@@ -19,7 +19,7 @@ export default async function Tournaments() {
       aria-labelledby="tournaments-heading"
     >
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex animate-view flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <Eyebrow>{t("eyebrow")}</Eyebrow>
             <h2

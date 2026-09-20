@@ -18,7 +18,7 @@ export default async function Talent() {
       aria-labelledby="talent-heading"
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:py-24">
-        <div>
+        <div className="animate-view">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
             id="talent-heading"

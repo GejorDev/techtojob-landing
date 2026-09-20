@@ -58,7 +58,7 @@ export default async function Companies() {
           </div>
         </div>
 
-        <div className="order-1 lg:order-2">
+        <div className="order-1 animate-view lg:order-2">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
             id="companies-heading"
