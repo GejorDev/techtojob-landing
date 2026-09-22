@@ -1,7 +1,7 @@
 # TechToJob — Landing
 
 Landing page for TechToJob (Spanish-speaking dev & tech community) built for **Torneo #2**.
-"Energía eléctrica" design: dark theme with teal accents, all native CSS.
+Design: dark theme with teal accents, all native CSS.
 
 ## Stack
 
