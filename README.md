@@ -1,7 +1,16 @@
 # TechToJob — Landing
 
 Landing page for TechToJob (Spanish-speaking dev & tech community) built for **Torneo #2**.
-Design: dark theme with teal accents, all native CSS.
+
+## Design
+
+Dark/teal contrast anchors the page: a dark hero with grid overlay and teal
+glow opens a rhythm of alternating light sections. Cards lift on hover with a
+teal border and soft shadow, CTAs are pill buttons (dark, or glowing teal for
+Discord), and a marquee ticker, terminal mockup and full-teal newsletter band
+punctuate the layout. Typography pairs Sora (display), Inter (body) and
+JetBrains Mono (accents); all motion is native CSS with a global
+`prefers-reduced-motion` reset.
 
 ## Stack
 
